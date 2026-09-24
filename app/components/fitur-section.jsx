@@ -38,44 +38,44 @@ export default function FiturSection() {
     <section className="px-4 pb-10">
       <h2
         className="font-poppins font-bold text-[#1E5BBB] text-center mb-5"
-        style={{ fontSize: "14px" }}
+        style={{ fontSize: "16px" }}
       >
         Kenapa Berdonasi Bersama Kami?
       </h2>
 
-      <div className="grid grid-cols-2 gap-3 justify-items-center">
-        {features.map((item, idx) => (
+      {/* px-8 dihapus & maxWidth kartu dihilangkan: kartu mengisi penuh tiap kolom */}
+      <div className="grid grid-cols-2 gap-3">
+        {features.map((item) => (
           <div
-            key={idx}
-            className="bg-white p-3 flex flex-col justify-between shadow-md transition-shadow hover:shadow-lg"
+            key={item.title}
+            className="bg-white p-4 flex flex-col gap-2.5 h-full transition-shadow hover:shadow-lg"
             style={{
-              width: "100%",
-              maxWidth: "230px",
-              height: "82px",
-              borderRadius: "8px",
+              borderRadius: "12px",
               boxShadow: "0 4px 14px rgba(0, 0, 0, 0.08)",
             }}
           >
-            <div className="flex items-center gap-2 mb-1">
-              <div className="w-6 h-6 rounded-md bg-[#EBF3FF] flex items-center justify-center shrink-0 p-1">
-                <Image
-                  src={item.icon}
-                  alt={item.title}
-                  width={18}
-                  height={18}
-                  style={{ objectFit: "contain" }}
-                />
-              </div>
-              <h3
-                className="font-poppins font-semibold text-[#252A34] leading-tight truncate"
-                style={{ fontSize: "10px" }}
-              >
-                {item.title}
-              </h3>
+            {/* Icon di atas */}
+            <div className="w-9 h-9 rounded-lg bg-[#EBF3FF] flex items-center justify-center shrink-0 p-1.5">
+              <Image
+                src={item.icon}
+                alt=""
+                width={24}
+                height={24}
+                style={{ objectFit: "contain" }}
+              />
             </div>
+
+            {/* Title di bawah icon */}
+            <h3
+              className="font-poppins font-semibold text-[#252A34] leading-tight line-clamp-2"
+              style={{ fontSize: "14px" }}
+            >
+              {item.title}
+            </h3>
+
             <p
-              className="font-poppins text-[#4A5565] leading-snug line-clamp-2"
-              style={{ fontSize: "8px", fontWeight: 400 }}
+              className="font-poppins text-[#4A5565] leading-snug line-clamp-3"
+              style={{ fontSize: "12px", fontWeight: 400 }}
             >
               {item.description}
             </p>

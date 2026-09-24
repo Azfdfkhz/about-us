@@ -60,10 +60,10 @@ export default function DampakSection() {
         </div>
 
         {/* 2 White Stat Cards (Corner Radius 9) */}
-        <div className="grid grid-cols-2 gap-3 mb-6 -mt-16 pl-8">
+        <div className="grid grid-cols-2 gap-9 mb-6 -mt-16 pl-3.5">
           {/* Card 1: 40Jt+ */}
           <div
-            className="bg-white p-3 relative overflow-hidden flex justify-between h-18 w-55  "
+            className="bg-white p-5 relative overflow-hidden flex justify-between h-18 w-60  "
             style={{ borderRadius: "9px", minHeight: "85px" }}
           >
             <div>
@@ -80,14 +80,18 @@ export default function DampakSection() {
                 Penerima Manfaat
               </p>
             </div>
-            <div className="self-end">
-              <Heart size={16} className="text-[#4B91FF]" />
-            </div>
+              <div className="self-end translate-y-1">
+                <img 
+                  src="/images/oval-love-two.svg" 
+                  alt="Heart" 
+                  className="w-6 h-6 object-contain" 
+                />
+              </div>
           </div>
 
           {/* Card 2: 300+ */}
           <div
-            className="bg-white p-5 relative overflow-hidden flex justify-between h-10 w-45"
+            className="bg-white p-5 relative overflow-hidden flex justify-between h-10 w-50"
             style={{ borderRadius: "9px", minHeight: "85px" }}
           >
             <div>
@@ -104,8 +108,12 @@ export default function DampakSection() {
                 Titik Penyaluran
               </p>
             </div>
-            <div className="self-end">
-              <Leaf size={16} className="text-[#4B91FF]" />
+            <div className="self-end translate-y-3">
+                <img 
+                  src="/images/leaf-1.svg" 
+                  alt="leaf" 
+                  className="w-8 h-8 object-contain" 
+                />
             </div>
           </div>
         </div>
@@ -131,64 +139,25 @@ export default function DampakSection() {
               </p>
             </div>
             {/* Weather SVG icon */}
-            <div className="absolute top-3 right-3 shrink-0">
+            <div className="absolute top-5 right-0 shrink-0">
               <Image
                 src="/images/weather.svg"
                 alt="Weather icon"
-                width={105}
-                height={105}
+                width={130}
+                height={150}
               />
             </div>
           </div>
 
-          {/* Map Container (Corner Radius 16) */}
-          {/* NOTE: no real map screenshot asset was provided in /public/images,
-              so this is a stylized placeholder (dotted distribution map) matching
-              the pink/purple look in the design. Swap the background for a real
-              map export (e.g. from Google Maps / Mapbox) when available. */}
-          <div
-            className="overflow-hidden relative w-full border border-gray-100"
-            style={{
-              borderRadius: "16px",
-              height: "210px",
-              background: "radial-gradient(circle at 30% 40%, #F3D9F0 0%, #F6E4F3 45%, #FBEFF9 100%)",
-            }}
-          >
-            {/* Faint dot-grid texture to evoke a map */}
-            <div
-              className="absolute inset-0"
+          <div className="overflow-hidden relative w-full border border-gray-100">
+            <img
+              src="/images/maps-lokasi.webp"
+              alt="maps lokasi"
+              className="w-full h-52.5 object-cover"
               style={{
-                backgroundImage: "radial-gradient(#E8B8E0 0.5px, transparent 0.5px)",
-                backgroundSize: "8px 8px",
-                opacity: 0.5,
+                borderRadius: "16px",
               }}
             />
-            {/* Scattered "distribution point" markers */}
-            {[
-              { top: "18%", left: "22%" }, { top: "30%", left: "30%" },
-              { top: "22%", left: "40%" }, { top: "45%", left: "55%" },
-              { top: "60%", left: "35%" }, { top: "70%", left: "50%" },
-              { top: "40%", left: "68%" }, { top: "55%", left: "75%" },
-              { top: "78%", left: "22%" }, { top: "15%", left: "60%" },
-            ].map((pos, i) => (
-              <span
-                key={i}
-                className="absolute rounded-full"
-                style={{
-                  top: pos.top,
-                  left: pos.left,
-                  width: "5px",
-                  height: "5px",
-                  backgroundColor: "#7C3AED",
-                  opacity: 0.75,
-                }}
-              />
-            ))}
-            {/* Zoom controls, top right */}
-            <div className="absolute top-2 right-2 flex flex-col bg-white rounded shadow-sm overflow-hidden">
-              <span className="w-5 h-5 flex items-center justify-center text-[10px] text-gray-500 border-b border-gray-100">+</span>
-              <span className="w-5 h-5 flex items-center justify-center text-[10px] text-gray-500">–</span>
-            </div>
           </div>
 
           {/* Text middle below map */}

@@ -76,9 +76,10 @@ export default function TimelineSection() {
         Dari satu langkah kecil, hingga perjalanan yang terus bertumbuh
       </p>
 
-      {/* Gray Video Container */}
+      {/* Video Container */}
+      {/* w-full + max-w-lg + mx-auto: selalu pas selebar layar di mobile & tetap di tengah */}
       <div
-        className="w-110 max-w-lg mx-auto mb-20 overflow-hidden shadow-lg group"
+        className="w-full max-w-lg mx-auto mb-20 overflow-hidden shadow-lg group"
         style={{ borderRadius: "16px" }}
       >
         <a
@@ -93,10 +94,9 @@ export default function TimelineSection() {
             alt="Cerita Perjalanan Kami"
             className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500"
           />
-          
+
           {/* Lapisan transparan dan Ikon Play di tengah */}
           <div className="absolute inset-0 bg-black/20 flex items-center justify-center group-hover:bg-black/10 transition-colors duration-300">
-            {/* Ukuran tombol diturunkan sedikit (w-14 h-14) agar proporsional */}
             <div className="w-14 h-14 bg-[#f5f5f5] rounded-full flex items-center justify-center shadow-lg">
               <Play className="w-7 h-7 text-[red] ml-1 fill-[red]" />
             </div>
@@ -106,17 +106,24 @@ export default function TimelineSection() {
 
       {/* Vertical Timeline */}
       <div className="relative pl-7 space-y-5">
-        {/* Blue vertical connecting line */}
-        <div
-          className="absolute left-3 top-3 bottom-3 w-0.5 bg-[#3B82F6]"
-          style={{ zIndex: 0 }}
-        />
-
         {timelineItems.map((item, idx) => (
-          <div key={idx} className="relative z-10">
-            {/* Timeline Circle Dot */}
+          <div key={item.year} className="relative z-10">
+            {/* Segmen garis: dari titik item ini ke titik item berikutnya.
+                Item pertama mulai dari titiknya (50%), item terakhir berhenti di titiknya (50%),
+                -1.25rem = jarak antar kartu (space-y-5) supaya sambungan antar segmen menyatu. */}
             <div
-              className="absolute -left-7 top-7 w-4 h-4 rounded-full border-2 border-white shadow-sm"
+              className="absolute -left-5 -translate-x-1/2 w-0.5 bg-[#3B82F6]"
+              style={{
+                top: idx === 0 ? "50%" : "-1.25rem",
+                bottom: idx === timelineItems.length - 1 ? "50%" : "-1.25rem",
+              }}
+            />
+
+            {/* Dot: -left-5 (-20px dari kartu = sumbu garis di x = 8px) lalu
+                -translate-x-1/2 menjadikan pusatnya tepat di garis.
+                top-1/2 + -translate-y-1/2 menaruhnya di tengah tinggi kartu. */}
+            <div
+              className="absolute -left-5 top-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full border-2 border-white shadow-sm"
               style={{ backgroundColor: item.dotColor }}
             />
 
@@ -130,9 +137,9 @@ export default function TimelineSection() {
             >
               {/* Year Badge */}
               <span
-                className="inline-block px-3 py-1 font-poppins font-bold rounded-full mb-2"
+                className="inline-flex items-center px-3.5 py-1.5 font-poppins font-bold leading-none rounded-full mb-2.5"
                 style={{
-                  fontSize: "9px",
+                  fontSize: "12px",
                   backgroundColor: item.badgeBg,
                   color: item.badgeText,
                 }}
@@ -143,7 +150,7 @@ export default function TimelineSection() {
               {/* Title */}
               <h3
                 className="font-poppins font-bold mb-1"
-                style={{ fontSize: "11px", color: item.textColor }}
+                style={{ fontSize: "14px", color: item.textColor }}
               >
                 {item.title}
               </h3>
@@ -151,7 +158,7 @@ export default function TimelineSection() {
               {/* Description */}
               <p
                 className="font-poppins leading-relaxed opacity-95"
-                style={{ fontSize: "10px", fontWeight: 400, color: item.textColor }}
+                style={{ fontSize: "12px", fontWeight: 400, color: item.textColor }}
               >
                 {item.description}
               </p>

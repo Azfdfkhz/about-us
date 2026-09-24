@@ -35,15 +35,15 @@ export default function FaqSection() {
   };
 
   return (
-    <section className="px-4 pb-12">
+    <section className="pb-12">
       {/* Top White Card with Rounded Top 70px */}
       <div
-        className="bg-white p-6 shadow-sm mb-6"
+        className="bg-white px-5 pt-8 pb-6 mb-6"
         style={{ borderRadius: "70px 70px 20px 20px" }}
       >
         <h2
           className="font-poppins font-extrabold text-black text-center mb-6"
-          style={{ fontSize: "14px" }}
+          style={{ fontSize: "18px" }}
         >
           Hal yang Sering Ditanyakan
         </h2>
@@ -53,23 +53,24 @@ export default function FaqSection() {
           {faqItems.map((item, idx) => (
             <div
               key={idx}
-              className="border-b border-[#D9D9D9] pb-3"
+              className="border-b border-[#D9D9D9] pb-4"
             >
               <button
                 onClick={() => toggle(idx)}
-                className="w-full flex items-center justify-between text-left gap-2 py-1"
+                aria-expanded={openIdx === idx}
+                className="w-full flex items-center justify-between text-left gap-3 py-1"
               >
                 <span
-                  className="font-poppins font-semibold text-[#5093D3]"
-                  style={{ fontSize: "10px" }}
+                  className="font-poppins font-semibold text-[#5093D3] leading-snug"
+                  style={{ fontSize: "14px" }}
                 >
                   {item.question}
                 </span>
                 <span className="shrink-0 text-[#5093D3]">
                   {openIdx === idx ? (
-                    <ChevronUp size={16} />
+                    <ChevronUp size={22} />
                   ) : (
-                    <ChevronDown size={16} />
+                    <ChevronDown size={22} />
                   )}
                 </span>
               </button>
@@ -77,7 +78,7 @@ export default function FaqSection() {
               {openIdx === idx && (
                 <p
                   className="font-poppins text-[#686C71] mt-2 leading-relaxed"
-                  style={{ fontSize: "10px", fontWeight: 500 }}
+                  style={{ fontSize: "13px", fontWeight: 500 }}
                 >
                   {item.answer}
                 </p>
@@ -89,46 +90,47 @@ export default function FaqSection() {
 
       {/* Bottom Help Card */}
       <div
-        className="p-4 flex items-center gap-3 relative"
+        className="mx-4 p-5 flex items-center gap-4 relative"
         style={{
-          borderRadius: "6px",
+          borderRadius: "10px",
           backgroundColor: "#F0F8FE",
-          border: "0.3px solid #3A70C4",
+          border: "0.5px solid #3A70C4",
         }}
       >
         <div className="shrink-0">
           <Image
             src="/images/bubbles-question.svg"
             alt="Bubbles question icon"
-            width={58}
-            height={58}
+            width={76}
+            height={76}
           />
         </div>
 
         <div className="flex-1">
           <h3
             className="font-poppins font-bold text-[#0047CA] mb-1"
-            style={{ fontSize: "11px" }}
+            style={{ fontSize: "15px" }}
           >
             Masih Perlu Bantuan?
           </h3>
           <p
             className="font-poppins text-[#0047CA] leading-snug mb-3"
-            style={{ fontSize: "9px", fontWeight: 400 }}
+            style={{ fontSize: "12px", fontWeight: 400 }}
           >
             Temukan informasi lebih lengkap di <span className="font-bold">pusat bantuan kami</span> atau hubungi <span className="font-bold">Customer Service Kami.</span>
           </p>
 
-          <div className="flex items-center gap-2">
+          {/* flex-wrap: tombol turun ke baris berikutnya bila layar sempit */}
+          <div className="flex flex-wrap items-center gap-2">
             <button
-              className="px-3 py-1 font-poppins font-bold text-white rounded text-[9px] shadow-sm active:scale-95 transition-transform"
+              className="px-4 py-2 font-poppins font-bold text-white rounded-md text-[12px] shadow-sm active:scale-95 transition-transform"
               style={{ backgroundColor: "#2E68B2" }}
             >
               Pusat Bantuan
             </button>
-            <span className="font-poppins text-[#0047CA] text-[9px]">atau</span>
+            <span className="font-poppins text-[#0047CA] text-[12px]">atau</span>
             <button
-              className="px-3 py-1 font-poppins font-bold text-[#0047CA] bg-white rounded border border-[#3A70C4] text-[9px] shadow-sm active:scale-95 transition-transform"
+              className="px-4 py-2 font-poppins font-bold text-[#0047CA] bg-white rounded-md border border-[#3A70C4] text-[12px] shadow-sm active:scale-95 transition-transform"
             >
               Hubungi Kami
             </button>
