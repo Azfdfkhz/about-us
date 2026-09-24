@@ -5,7 +5,7 @@ import { Heart, Leaf } from "lucide-react";
 
 export default function DampakSection() {
   return (
-    <section className="px-4 pb-6">
+    <section>
       {/* Yellow to white gradient container */}
       <div
         className="relative overflow-hidden p-5 pt-8"
@@ -142,16 +142,53 @@ export default function DampakSection() {
           </div>
 
           {/* Map Container (Corner Radius 16) */}
+          {/* NOTE: no real map screenshot asset was provided in /public/images,
+              so this is a stylized placeholder (dotted distribution map) matching
+              the pink/purple look in the design. Swap the background for a real
+              map export (e.g. from Google Maps / Mapbox) when available. */}
           <div
             className="overflow-hidden relative w-full border border-gray-100"
-            style={{ borderRadius: "16px", height: "150px" }}
+            style={{
+              borderRadius: "16px",
+              height: "150px",
+              background: "radial-gradient(circle at 30% 40%, #F3D9F0 0%, #F6E4F3 45%, #FBEFF9 100%)",
+            }}
           >
-            <Image
-              src="/images/Proposal-Aceh-Gebyar-Kemerdekaan.webp"
-              alt="Indonesia map"
-              fill
-              style={{ objectFit: "cover" }}
+            {/* Faint dot-grid texture to evoke a map */}
+            <div
+              className="absolute inset-0"
+              style={{
+                backgroundImage: "radial-gradient(#E8B8E0 0.5px, transparent 0.5px)",
+                backgroundSize: "8px 8px",
+                opacity: 0.5,
+              }}
             />
+            {/* Scattered "distribution point" markers */}
+            {[
+              { top: "18%", left: "22%" }, { top: "30%", left: "30%" },
+              { top: "22%", left: "40%" }, { top: "45%", left: "55%" },
+              { top: "60%", left: "35%" }, { top: "70%", left: "50%" },
+              { top: "40%", left: "68%" }, { top: "55%", left: "75%" },
+              { top: "78%", left: "22%" }, { top: "15%", left: "60%" },
+            ].map((pos, i) => (
+              <span
+                key={i}
+                className="absolute rounded-full"
+                style={{
+                  top: pos.top,
+                  left: pos.left,
+                  width: "5px",
+                  height: "5px",
+                  backgroundColor: "#7C3AED",
+                  opacity: 0.75,
+                }}
+              />
+            ))}
+            {/* Zoom controls, top right */}
+            <div className="absolute top-2 right-2 flex flex-col bg-white rounded shadow-sm overflow-hidden">
+              <span className="w-5 h-5 flex items-center justify-center text-[10px] text-gray-500 border-b border-gray-100">+</span>
+              <span className="w-5 h-5 flex items-center justify-center text-[10px] text-gray-500">–</span>
+            </div>
           </div>
         </div>
 
@@ -172,12 +209,12 @@ export default function DampakSection() {
         </div>
 
         {/* Happy children graphic at bottom */}
-        <div className="mt-3 flex justify-center">
+        <div className="flex justify-center -mt-9">
           <Image
-            src="/images/Proposal-Aceh-Gebyar-Kemerdekaan.png"
-            alt="Happy children"
-            width={360}
-            height={160}
+            src="/images/Proposal-Aceh-Gebyar-Kemerdekaan.webp"
+            alt="Anak-anak penerima manfaat Sharing Happiness"
+            width={560}
+            height={360}
             style={{ objectFit: "contain" }}
           />
         </div>

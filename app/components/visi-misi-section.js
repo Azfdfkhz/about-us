@@ -2,20 +2,20 @@ import Image from "next/image";
 
 export default function VisiMisiSection() {
   return (
-    <section className="px-4 relative z-20 -mt-6">
+    <section className="relative z-20 -mt-20">
       <div
-        className="bg-white p-5 shadow-lg relative"
+        className="bg-white p-5 relative"
         style={{ borderRadius: "13px" }}
       >
         {/* Top Section: Illustration Left + Headline Right */}
         <div className="flex items-start gap-3 mb-5">
           {/* Illustration SVG */}
-          <div className="shrink-0 w-[145px] pt-1">
+          <div className="shrink-0 w-[190px] pt-2">
             <Image
               src="/images/happiness-academy-2.svg"
               alt="Happiness Academy illustration"
-              width={145}
-              height={140}
+              width={245}
+              height={240}
               style={{ objectFit: "contain" }}
             />
           </div>

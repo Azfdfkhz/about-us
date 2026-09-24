@@ -7,7 +7,7 @@ export default function AjakSection() {
         className="p-6 text-center text-white shadow-md"
         style={{
           borderRadius: "14px",
-          backgroundColor: "#2B62AD",
+          backgroundColor: "#2E68B2",
         }}
       >
         <h2
