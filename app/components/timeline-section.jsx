@@ -1,4 +1,5 @@
 "use client";
+import { Play } from 'lucide-react';
 
 const timelineItems = [
   {
@@ -63,13 +64,13 @@ export default function TimelineSection() {
     <section className="px-4 pb-10">
       {/* Title */}
       <h2
-        className="font-poppins font-bold text-[#1E5BBB] mb-0.5"
+        className="font-poppins font-bold text-[#1E5BBB] mb-0.5 px-3.5"
         style={{ fontSize: "14px" }}
       >
         Awal Mula Cerita Perjalanan Kami
       </h2>
       <p
-        className="font-poppins text-[#1E5BBB] mb-4"
+        className="font-poppins text-[#1E5BBB] mb-4 px-3.5"
         style={{ fontSize: "10px", fontWeight: 400 }}
       >
         Dari satu langkah kecil, hingga perjalanan yang terus bertumbuh
@@ -77,17 +78,29 @@ export default function TimelineSection() {
 
       {/* Gray Video Container */}
       <div
-        className="bg-[#D9D9D9] w-full flex items-center justify-center p-8 mb-8 text-center shadow-inner"
-        style={{ borderRadius: "16px", minHeight: "160px" }}
+        className="w-110 max-w-lg mx-auto mb-20 overflow-hidden shadow-lg group"
+        style={{ borderRadius: "16px" }}
       >
         <a
           href="https://youtu.be/VDUBjAeCFmE"
           target="_blank"
           rel="noopener noreferrer"
-          className="font-poppins font-bold text-[#1E5BBB] underline hover:opacity-80 transition-opacity"
-          style={{ fontSize: "13px" }}
+          className="block relative w-full h-full"
         >
-          https://youtu.be/VDUBjAeCFmE
+          {/* Mengambil thumbnail resolusi tinggi otomatis dari YouTube */}
+          <img
+            src="https://img.youtube.com/vi/VDUBjAeCFmE/maxresdefault.jpg"
+            alt="Cerita Perjalanan Kami"
+            className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500"
+          />
+          
+          {/* Lapisan transparan dan Ikon Play di tengah */}
+          <div className="absolute inset-0 bg-black/20 flex items-center justify-center group-hover:bg-black/10 transition-colors duration-300">
+            {/* Ukuran tombol diturunkan sedikit (w-14 h-14) agar proporsional */}
+            <div className="w-14 h-14 bg-[#f5f5f5] rounded-full flex items-center justify-center shadow-lg">
+              <Play className="w-7 h-7 text-[red] ml-1 fill-[red]" />
+            </div>
+          </div>
         </a>
       </div>
 

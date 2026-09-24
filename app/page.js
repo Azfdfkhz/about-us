@@ -10,7 +10,7 @@ import FaqSection from "./components/faq-section";
 
 export default function Home() {
   return (
-    <main className="w-full min-h-screen bg-[#F5F7FF] text-gray-900 pb-8">
+    <main className="w-full min-h-screen bg-white text-gray-900 pb-8">
       {/* Bagian 1: Hero */}
       <HeroSection />
 

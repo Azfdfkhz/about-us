@@ -47,13 +47,13 @@ export default function HeroSection() {
             </p>
             <h1
               className="font-poppins font-bold text-white leading-tight mb-2"
-              style={{ fontSize: "18px" }}
+              style={{ fontSize: "20px" }}
             >
               Selalu Memiliki Cerita
             </h1>
             <p
               className="font-poppins text-white leading-relaxed"
-              style={{ fontSize: "11px", fontWeight: 400, opacity: 0.95 }}
+              style={{ fontSize: "12px", fontWeight: 400, opacity: 0.95 }}
             >
               SharingHappiness hadir untuk menghubungkan kebaikan, mengubah kepedulian menjadi dampak nyata.
             </p>
@@ -67,42 +67,42 @@ export default function HeroSection() {
             {/* Image 1: 85 x 87 (Top Right) */}
             <div
               className="absolute"
-              style={{ top: "0px", right: "35px" }}
+              style={{ top: "0px", right: "100px" }}
             >
               <Image
                 src="/images/1.svg"
                 alt="Circle 1"
                 width={85}
                 height={87}
-                className="rounded-full border-2 border-white object-cover shadow-sm"
+                className="rounded-full object-cover shadow-sm"
               />
             </div>
 
             {/* Image 2: 37 x 38 (Middle Left) */}
             <div
               className="absolute"
-              style={{ top: "95px", right: "125px" }}
+              style={{ top: "120px", right: "125px" }}
             >
               <Image
                 src="/images/2.svg"
                 alt="Circle 2"
-                width={37}
-                height={38}
-                className="rounded-full border-2 border-white object-cover shadow-sm"
+                width={47}
+                height={48}
+                className="rounded-full object-cover shadow-sm"
               />
             </div>
 
             {/* Image 3: 53 x 54 (Bottom Right) */}
             <div
               className="absolute"
-              style={{ top: "165px", right: "20px" }}
+              style={{ top: "180px", right: "15px" }}
             >
               <Image
                 src="/images/3.svg"
                 alt="Circle 3"
                 width={53}
                 height={54}
-                className="rounded-full border-2 border-white object-cover shadow-sm"
+                className="rounded-full object-cover shadow-sm"
               />
             </div>
           </div>
