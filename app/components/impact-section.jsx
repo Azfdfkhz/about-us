@@ -3,6 +3,8 @@
 import Image from "next/image";
 import { Heart, Leaf } from "lucide-react";
 
+const BASE = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
 export default function ImpactSection() {
   return (
     <section className="pb-3">
@@ -76,7 +78,7 @@ export default function ImpactSection() {
             </div>
             <div className="shrink-0 ml-1">
               <img 
-                src="/images/real-impact/oval-love-two.svg" 
+                src={`${BASE}/images/real-impact/oval-love-two.svg`} 
                 alt="Heart" 
                 className="w-5 h-5 sm:w-6 sm:h-6 object-contain" 
               />
@@ -101,7 +103,7 @@ export default function ImpactSection() {
             </div>
             <div className="shrink-0 ml-1">
               <img 
-                src="/images/real-impact/leaf-1.svg" 
+                src={`${BASE}/images/real-impact/leaf-1.svg`} 
                 alt="leaf" 
                 className="w-5 h-5 sm:w-6 sm:h-6 object-contain" 
               />
@@ -142,7 +144,7 @@ export default function ImpactSection() {
 
           <div className="overflow-hidden relative w-full border border-gray-100">
             <img
-              src="/images/real-impact/maps-location.webp"
+              src={`${BASE}/images/real-impact/maps-location.webp`}
               alt="maps lokasi"
               className="w-full h-52.5 object-cover"
               style={{
