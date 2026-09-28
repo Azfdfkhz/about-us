@@ -51,51 +51,60 @@ export default function TeamSection() {
         Dari Satu Langkah Kecil, hingga Perjalanan yang Terus Bertumbuh
       </p>
 
-      <div className="grid grid-cols-2 gap-x-4 gap-y-6 items-start">
-        {teamMembers.map((member, idx) => (
-          <div
-            key={member.name}
-            className={`flex flex-col h-full overflow-hidden rounded-t-[30px] ${
-              idx % 2 === 1 ? "mt-2 sm:mt-4" : "-mt-4 sm:-mt-5"
-            }`}
-            style={{ containerType: "inline-size" }}
-          >
-            {/* Foto */}
-            <div className="relative w-full aspect-[196/190] bg-[#FFCC0A]">
-              <Image
-                src={member.image}
-                alt={member.name}
-                fill
-                sizes="50vw"
-                className="object-contain object-bottom"
-              />
-            </div>
-
-            {/* Badge biru dengan sisi bawah miring */}
+      <div className="grid grid-cols-2 gap-x-4 gap-y-8 items-start">
+        {teamMembers.map((member, idx) => {
+          const isLeft = idx % 2 === 0;
+          return (
             <div
-              className="flex-1 bg-[#1E5BBB] text-white"
-              style={{
-                marginTop: "-5cqw",
-                padding: "4cqw 10cqw 9cqw",
-                clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 85%)",
-              }}
+              key={member.name}
+              className="flex flex-col h-full rounded-t-[30px]"
+              style={{ containerType: "inline-size" }}
             >
-              <p
-                className="font-poppins font-semibold leading-tight"
-                style={{ fontSize: "7.5cqw" }}
+              {/* Foto: Kolom kiri berada di atas */}
+              <div
+                className="relative w-full bg-[#FFCC0A] rounded-t-[30px] overflow-hidden"
+                style={{
+                  height: isLeft ? "105cqw" : "97cqw",
+                  marginTop: isLeft ? "-8cqw" : "0cqw",
+                }}
               >
-                {member.name}
-              </p>
+                <Image
+                  src={member.image}
+                  alt={member.name}
+                  fill
+                  sizes="50vw"
+                  className={`object-contain object-bottom ${
+                    isLeft ? "-translate-y-[2cqw]" : ""
+                  }`}
+                />
+              </div>
 
-              <p
-                className="font-poppins leading-tight mt-[1cqw]"
-                style={{ fontSize: "6cqw", fontWeight: 400 }}
+              {/* Badge biru dengan sisi bawah miring: Tetap sejajar dengan yang sebelahnya */}
+              <div
+                className="flex-1 bg-[#1E5BBB] text-white flex flex-col justify-center min-h-[30cqw]"
+                style={{
+                  marginTop: "-5cqw",
+                  padding: "4cqw 6cqw 8cqw",
+                  clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 85%)",
+                }}
               >
-                {member.title}
-              </p>
+                <p
+                  className="font-poppins font-semibold leading-tight"
+                  style={{ fontSize: "7.5cqw" }}
+                >
+                  {member.name}
+                </p>
+
+                <p
+                  className="font-poppins leading-tight mt-[1cqw]"
+                  style={{ fontSize: "5.5cqw", fontWeight: 400 }}
+                >
+                  {member.title}
+                </p>
+              </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </section>
   );

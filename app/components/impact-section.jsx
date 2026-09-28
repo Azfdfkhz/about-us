@@ -173,13 +173,13 @@ export default function ImpactSection() {
           </div>
 
           {/* Happy children graphic at bottom */}
-          <div className="-mt-20 sm:-mt-22 flex justify-center overflow-visible">
+          <div className="-mt-8 sm:-mt-22 flex justify-center overflow-hidden sm:overflow-visible">
             <Image
               src="/images/real-impact/beneficiary-children.webp"
               alt="Anak-anak penerima manfaat Sharing Happiness"
               width={650}
               height={400}
-              className="w-[550px] max-w-none object-contain pointer-events-none select-none"
+              className="w-full max-w-[340px] sm:w-[550px] sm:max-w-none h-auto object-contain pointer-events-none select-none"
             />
           </div>
 
