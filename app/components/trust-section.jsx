@@ -17,20 +17,44 @@ const legalItems = [
     code: "70.418.963.8-429.000",
   },
   {
+    title: "Surat Keterangan Domisili",
+    code: "517/123-Kel.Domisili/2023",
+  },
+  {
     title: "Terdaftar di Kementerian Hukum dan HAM",
     code: "AHU-000017.AH.01.05 Tahun 2019",
+    driveUrl: "https://drive.google.com/file/d/1XgHAipEP1tgLng9Nd3qhTtW8_KGK_rIa/view", 
   },
   {
     title: "Memiliki Izin Pengumpulan Sumbangan Kementerian Sosial",
     code: "TU.01.02/3914-Dinsos/XI/2025",
+    driveUrl: "https://drive.google.com/file/d/1TWdyohnyQkVtPlVyUhgG2ObVIAmlBCZx/view",
   },
   {
     title: "Memiliki Surat Keterangan Pengumpulan Uang dan Barang",
     code: "111.HUK-PS.2026 Yayasan Berbagi Bahagia",
+    driveUrl: "https://drive.google.com/file/d/1zD2fUnDsuFsmckGL1WH09U7VOpWGTpu6/view",
   },
 ];
 
-const reportYears = [2021, 2022, 2023, 2024];
+const reportYears = [
+  {
+    year: 2021,
+    driveUrl: "https://drive.google.com/file/d/YOUR_DRIVE_REPORT_2021/view", // Ganti dengan Link Google Drive Laporan 2021
+  },
+  {
+    year: 2022,
+    driveUrl: "https://drive.google.com/file/d/YOUR_DRIVE_REPORT_2022/view", // Ganti dengan Link Google Drive Laporan 2022
+  },
+  {
+    year: 2023,
+    driveUrl: "https://drive.google.com/file/d/YOUR_DRIVE_REPORT_2023/view", // Ganti dengan Link Google Drive Laporan 2023
+  },
+  {
+    year: 2024,
+    driveUrl: "https://drive.google.com/file/d/YOUR_DRIVE_REPORT_2024/view", // Ganti dengan Link Google Drive Laporan 2024
+  },
+];
 
 export default function TrustSection() {
   return (
@@ -73,18 +97,29 @@ export default function TrustSection() {
             Sharing Happiness berkomitmen menjalankan seluruh program secara legal, transparan, dan dapat dipertanggungjawabkan.
           </p>
 
-          {/* 3 Legal Items */}
+          {/* Legal Items */}
           <div className="space-y-3">
             {legalItems.map((item, idx) => (
               <div key={idx}>
-                <a
-                  href="#"
-                  className="inline-flex items-center gap-1 font-poppins font-semibold text-black hover:text-[#1E5BBB] transition-colors"
-                  style={{ fontSize: "12px" }}
-                >
-                  <span>{item.title}</span>
-                  <ExternalLink size={10} className="shrink-0 text-black" />
-                </a>
+                {item.driveUrl ? (
+                  <a
+                    href={item.driveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 font-poppins font-semibold text-black hover:text-[#1E5BBB] transition-colors"
+                    style={{ fontSize: "12px" }}
+                  >
+                    <span>{item.title}</span>
+                    <ExternalLink size={10} className="shrink-0 text-black" />
+                  </a>
+                ) : (
+                  <span
+                    className="font-poppins font-semibold text-black block"
+                    style={{ fontSize: "12px" }}
+                  >
+                    {item.title}
+                  </span>
+                )}
                 <p
                   className="font-poppins text-[#7B7B7B] mt-0.5"
                   style={{ fontSize: "11px", fontWeight: 500 }}
@@ -128,16 +163,18 @@ export default function TrustSection() {
 
         {/* 4 Report Buttons */}
         <div className="flex flex-col gap-2 sm:gap-2.5 flex-1 min-w-0">
-          {reportYears.map((year) => (
+          {reportYears.map((report) => (
             <a
-              key={year}
-              href="#"
+              key={report.year}
+              href={report.driveUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center justify-between gap-1.5 sm:gap-2 w-full h-9 sm:h-11 px-2.5 sm:px-3 bg-white transition-colors hover:bg-blue-50 border border-[#1E5BBB] rounded-lg no-underline"
             >
               <span
                 className="font-poppins font-medium text-[#1E5BBB] text-[10px] sm:text-[12px] truncate"
               >
-                Laporan Keuangan {year}
+                Laporan Keuangan {report.year}
               </span>
               <ArrowRight size={15} className="text-[#1E5BBB] shrink-0" />
             </a>
