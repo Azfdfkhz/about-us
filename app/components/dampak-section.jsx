@@ -26,94 +26,85 @@ export default function DampakSection() {
         </div>
 
         {/* Hero Image + Total Donasi 800M+ */}
-        <div className="flex items-center gap-3 mb-6">
-          <div className="w-[250px] shrink-0">
+        <div className="flex items-center gap-2 sm:gap-4 mb-4 pb-8">
+          <div className="w-[195px] sm:w-[210px] shrink-0">
             <Image
               src="/images/happines-gift.webp"
               alt="Happines Gift illustration"
-              width={270}
-              height={290}
-              style={{ objectFit: "contain" }}
+              width={350}
+              height={270}
+              className="w-full h-auto object-contain"
             />
           </div>
 
-          <div className="flex-1">
+          <div className="flex-1 min-w-0 pr-1">
             <p
-              className="font-poppins font-bold text-[#1E5BBB] uppercase tracking-wide"
-              style={{ fontSize: "12px" }}
+              className="font-poppins font-bold text-[#1E5BBB] uppercase tracking-wide text-[10px] sm:text-[12px]"
             >
               Total Donasi
             </p>
             <p
-              className="font-poppins font-bold text-[#1E5BBB] tracking-tight leading-none my-1"
-              style={{ fontSize: "55px" }}
+              className="font-poppins font-extrabold text-[#1E5BBB] tracking-tight leading-none my-1 text-[34px] sm:text-[48px] md:text-[54px]"
             >
               800M+
             </p>
             <p
-              className="font-poppins text-[#1E5BBB] leading-snug"
-              style={{ fontSize: "12px", fontWeight: 400 }}
+              className="font-poppins text-[#1E5BBB] leading-snug text-[10px] sm:text-[12px] font-normal break-words"
             >
               Amanah yang telah tersalurkan untuk menghadirkan kebahagian.
             </p>
           </div>
         </div>
 
-        {/* 2 White Stat Cards (Corner Radius 9) */}
-        <div className="grid grid-cols-2 gap-9 mb-6 -mt-16 pl-3.5">
+        {/* 2 White Stat Cards (Naik ke atas menumpuk bagian bawah ilustrasi) */}
+        <div className="grid grid-cols-2 gap-2.5 sm:gap-3.5 mb-6 px-1 -mt-17 sm:-mt-19 relative z-10">
           {/* Card 1: 40Jt+ */}
           <div
-            className="bg-white p-5 relative overflow-hidden flex justify-between h-18 w-60  "
-            style={{ borderRadius: "9px", minHeight: "85px" }}
+            className="bg-white p-3 sm:p-4 rounded-xl shadow-sm flex items-end justify-between border border-yellow-100/60 min-h-[76px] sm:min-h-[85px]"
           >
-            <div>
+            <div className="min-w-0">
               <p
-                className="font-poppins font-bold text-[#1E5BBB] tracking-tight leading-none"
-                style={{ fontSize: "32px" }}
+                className="font-poppins font-bold text-[#1E5BBB] tracking-tight leading-none text-[24px] sm:text-[32px]"
               >
                 40Jt+
               </p>
               <p
-                className="font-poppins text-[#1E5BBB] mt-1"
-                style={{ fontSize: "10px", fontWeight: 400 }}
+                className="font-poppins text-[#1E5BBB] mt-1 text-[9.5px] sm:text-[11px] font-normal leading-tight"
               >
                 Penerima Manfaat
               </p>
             </div>
-              <div className="self-end translate-y-1">
-                <img 
-                  src="/images/oval-love-two.svg" 
-                  alt="Heart" 
-                  className="w-6 h-6 object-contain" 
-                />
-              </div>
+            <div className="shrink-0 ml-1">
+              <img 
+                src="/images/oval-love-two.svg" 
+                alt="Heart" 
+                className="w-5 h-5 sm:w-6 sm:h-6 object-contain" 
+              />
+            </div>
           </div>
 
           {/* Card 2: 300+ */}
           <div
-            className="bg-white p-5 relative overflow-hidden flex justify-between h-10 w-50"
-            style={{ borderRadius: "9px", minHeight: "85px" }}
+            className="bg-white p-3 sm:p-4 rounded-xl shadow-sm flex items-end justify-between border border-yellow-100/60 min-h-[76px] sm:min-h-[85px]"
           >
-            <div>
+            <div className="min-w-0">
               <p
-                className="font-poppins font-bold text-[#1E5BBB] tracking-tight leading-none"
-                style={{ fontSize: "32px" }}
+                className="font-poppins font-bold text-[#1E5BBB] tracking-tight leading-none text-[24px] sm:text-[32px]"
               >
                 300+
               </p>
               <p
-                className="font-poppins text-[#1E5BBB] mt-1"
-                style={{ fontSize: "10px", fontWeight: 400 }}
+                className="font-poppins text-[#1E5BBB] mt-1 text-[9.5px] sm:text-[11px] font-normal leading-tight"
               >
                 Titik Penyaluran
               </p>
             </div>
-            <div className="self-end translate-y-3">
-                <img 
-                  src="/images/leaf-1.svg" 
-                  alt="leaf" 
-                  className="w-8 h-8 object-contain" 
-                />
+            <div className="shrink-0 ml-1">
+              <img 
+                src="/images/leaf-1.svg" 
+                alt="leaf" 
+                className="w-5 h-5 sm:w-6 sm:h-6 object-contain" 
+              />
             </div>
           </div>
         </div>
@@ -183,7 +174,7 @@ export default function DampakSection() {
               alt="Anak-anak penerima manfaat Sharing Happiness"
               width={320}
               height={290}
-              className="w-[620px] max-w-none object-contain"
+              className="w-155 max-w-none object-contain"
             />
           </div>
 

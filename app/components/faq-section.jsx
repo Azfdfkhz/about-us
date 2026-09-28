@@ -66,11 +66,11 @@ export default function FaqSection() {
                 >
                   {item.question}
                 </span>
-                <span className="shrink-0 text-[#5093D3]">
+                <span className="shrink-0 text-[#686C71]">
                   {openIdx === idx ? (
-                    <ChevronUp size={22} />
+                    <ChevronUp size={24} />
                   ) : (
-                    <ChevronDown size={22} />
+                    <ChevronDown size={24} />
                   )}
                 </span>
               </button>
@@ -90,7 +90,7 @@ export default function FaqSection() {
 
       {/* Bottom Help Card */}
       <div
-        className="mx-4 p-5 flex items-center gap-4 relative"
+        className="mx-3 p-4 flex items-center gap-3 relative"
         style={{
           borderRadius: "10px",
           backgroundColor: "#F0F8FE",
@@ -101,36 +101,36 @@ export default function FaqSection() {
           <Image
             src="/images/bubbles-question.svg"
             alt="Bubbles question icon"
-            width={76}
-            height={76}
+            width={54}
+            height={54}
           />
         </div>
 
-        <div className="flex-1">
+        <div className="flex-1 min-w-0">
           <h3
-            className="font-poppins font-bold text-[#0047CA] mb-1"
-            style={{ fontSize: "15px" }}
+            className="font-poppins font-bold text-[#0047CA] mb-0.5"
+            style={{ fontSize: "13px" }}
           >
             Masih Perlu Bantuan?
           </h3>
           <p
-            className="font-poppins text-[#0047CA] leading-snug mb-3"
-            style={{ fontSize: "12px", fontWeight: 400 }}
+            className="font-poppins text-[#0047CA] leading-snug mb-2.5"
+            style={{ fontSize: "10px", fontWeight: 400 }}
           >
             Temukan informasi lebih lengkap di <span className="font-bold">pusat bantuan kami</span> atau hubungi <span className="font-bold">Customer Service Kami.</span>
           </p>
 
-          {/* flex-wrap: tombol turun ke baris berikutnya bila layar sempit */}
-          <div className="flex flex-wrap items-center gap-2">
+          {/* Single horizontal line row: no wrap */}
+          <div className="flex items-center gap-1.5 whitespace-nowrap">
             <button
-              className="px-4 py-2 font-poppins font-bold text-white rounded-md text-[12px] shadow-sm active:scale-95 transition-transform"
+              className="px-2.5 py-1.5 font-poppins font-bold text-white rounded text-[10px] sm:text-[11px] shadow-sm active:scale-95 transition-transform shrink-0"
               style={{ backgroundColor: "#2E68B2" }}
             >
               Pusat Bantuan
             </button>
-            <span className="font-poppins text-[#0047CA] text-[12px]">atau</span>
+            <span className="font-poppins text-[#0047CA] text-[10px] sm:text-[11px] shrink-0">atau</span>
             <button
-              className="px-4 py-2 font-poppins font-bold text-[#0047CA] bg-white rounded-md border border-[#3A70C4] text-[12px] shadow-sm active:scale-95 transition-transform"
+              className="px-2.5 py-1.5 font-poppins font-bold text-[#0047CA] bg-white rounded border border-[#3A70C4] text-[10px] sm:text-[11px] shadow-sm active:scale-95 transition-transform shrink-0"
             >
               Hubungi Kami
             </button>

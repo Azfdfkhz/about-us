@@ -35,7 +35,7 @@ const teamMembers = [
 
 export default function TimSection() {
   return (
-    <section className="px-10 pb-10">
+    <section className="px-4 sm:px-10 pb-10">
       {/* Heading */}
       <h2
         className="font-poppins font-bold text-[#1E5BBB] leading-snug"
@@ -45,14 +45,14 @@ export default function TimSection() {
       </h2>
 
       <p
-        className="font-poppins text-[#1E5BBB] leading-snug mb-5"
-        style={{ fontSize: "14px", fontWeight: 400 }}
+        className="font-poppins text-[#1E5BBB] leading-snug mb-5 text-[11px] sm:text-[14px]"
+        style={{ fontWeight: 400 }}
       >
         Dari satu langkah kecil, hingga perjalanan yang terus bertumbuh
       </p>
 
-      {/* Team Grid */}
-      <div className="grid grid-cols-3 gap-x-4 gap-y-5 items-stretch">
+      {/* Team Grid: 2 columns on mobile (<640px), 3 columns on desktop (>=640px) */}
+      <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-x-4 sm:gap-y-5 items-stretch">
         {teamMembers.map((member) => (
           <div
             key={member.name}
@@ -66,7 +66,7 @@ export default function TimSection() {
                 src={member.image}
                 alt={member.name}
                 fill
-                sizes="33vw"
+                sizes="(max-width: 640px) 50vw, 33vw"
                 className="object-contain object-bottom"
               />
             </div>
@@ -75,7 +75,7 @@ export default function TimSection() {
             <div
               className="flex-1 bg-[#1E5BBB] text-white"
               style={{
-                marginTop: "-6cqw", // naikkan badge (ubah angkanya untuk atur tinggi)
+                marginTop: "-6cqw", // naikkan badge
                 padding: "4cqw 6cqw 9cqw",
                 clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 91%)",
               }}

@@ -5,6 +5,18 @@ import { ShieldCheck, ExternalLink, ArrowRight } from "lucide-react";
 
 const legalItems = [
   {
+    title: "Akta Notaris",
+    code: "Irma Rachmawati, SH NO 58 Tangqal 23 April 2014",
+  },
+  {
+    title: "Perubahan Akta Yayasan",
+    code: "Ajeng Dini Pertiwi, S.H., M.Kn. NO AHU-00044.AH.02.01.TAHUN 2021 05 November 2021",
+  },
+  {
+    title: "NPWP",
+    code: "70.418.963.8-429.000",
+  },
+  {
     title: "Terdaftar di Kementerian Hukum dan HAM",
     code: "AHU-000017.AH.01.05 Tahun 2019",
   },
@@ -95,46 +107,39 @@ export default function AmanahSection() {
 
       {/* Laporan Keuangan Header */}
       <h3
-        className="font-poppins text-[#1E5BBB] mt-6 mb-4 px-3"
-        style={{ fontSize: "17px" }}
+        className="font-poppins text-[#1E5BBB] mt-6 mb-3 sm:mb-4 px-3 text-[14px] sm:text-[17px]"
       >
         <span className="font-bold">Laporan Keuangan</span>{" "}
         <span className="font-normal">Sharing Happiness</span>
       </h3>
 
       {/* Laporan Keuangan Section with report.svg */}
-      {/* px-8 dihapus & lebar tombol tidak lagi tetap (233px): tombol mengisi sisa ruang di samping gambar */}
-      <div className="flex items-center gap-3">
+      <div className="flex items-center gap-2 sm:gap-3 px-1 sm:px-3">
         {/* Report SVG */}
-        <div className="shrink-0 px-4">
+        <div className="shrink-0">
           <Image
             src="/images/report.svg"
             alt="Report icon"
-            width={140}
-            height={140}
+            width={125}
+            height={125}
+            className="w-[95px] sm:w-[130px] h-auto object-contain"
           />
         </div>
 
         {/* 4 Report Buttons */}
-        <div className="flex flex-col gap-2.5 flex-1 min-w-0">
+        <div className="flex flex-col gap-2 sm:gap-2.5 flex-1 min-w-0">
           {reportYears.map((year) => (
             <a
               key={year}
               href="#"
-              className="flex items-center justify-between gap-2 w-full h-11 px-3 bg-white transition-colors hover:bg-blue-50"
-              style={{
-                borderRadius: "8px",
-                border: "1px solid #1E5BBB",
-                textDecoration: "none",
-              }}
+              className="flex items-center justify-between gap-1.5 sm:gap-2 w-full h-9 sm:h-11 px-2.5 sm:px-3 bg-white transition-colors hover:bg-blue-50 border border-[#1E5BBB] rounded-lg no-underline"
             >
               <span
-                className="font-poppins font-medium text-[#1E5BBB] whitespace-nowrap"
-                style={{ fontSize: "12px" }}
+                className="font-poppins font-medium text-[#1E5BBB] text-[10px] sm:text-[12px] truncate"
               >
                 Laporan Keuangan {year}
               </span>
-              <ArrowRight size={16} color="#1E5BBB" className="shrink-0" />
+              <ArrowRight size={15} className="text-[#1E5BBB] shrink-0" />
             </a>
           ))}
         </div>

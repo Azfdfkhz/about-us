@@ -77,10 +77,8 @@ export default function TimelineSection() {
       </p>
 
       {/* Video Container */}
-      {/* w-full + max-w-lg + mx-auto: selalu pas selebar layar di mobile & tetap di tengah */}
       <div
-        className="w-full max-w-lg mx-auto mb-20 overflow-hidden shadow-lg group"
-        style={{ borderRadius: "16px" }}
+        className="w-full max-w-lg mx-auto mb-8 overflow-hidden shadow-lg group rounded-2xl"
       >
         <a
           href="https://youtu.be/VDUBjAeCFmE"
@@ -105,41 +103,32 @@ export default function TimelineSection() {
       </div>
 
       {/* Vertical Timeline */}
-      <div className="relative pl-7 space-y-5">
-        {timelineItems.map((item, idx) => (
-          <div key={item.year} className="relative z-10">
-            {/* Segmen garis: dari titik item ini ke titik item berikutnya.
-                Item pertama mulai dari titiknya (50%), item terakhir berhenti di titiknya (50%),
-                -1.25rem = jarak antar kartu (space-y-5) supaya sambungan antar segmen menyatu. */}
-            <div
-              className="absolute -left-5 -translate-x-1/2 w-0.5 bg-[#3B82F6]"
-              style={{
-                top: idx === 0 ? "50%" : "-1.25rem",
-                bottom: idx === timelineItems.length - 1 ? "50%" : "-1.25rem",
-              }}
-            />
+      <div className="relative pl-6 space-y-4">
+        {/* Continuous blue connecting line */}
+        <div
+          className="absolute left-[7px] top-15 bottom-15 w-0.5 bg-[#3B82F6]"
+          style={{ zIndex: 0 }}
+        />
 
-            {/* Dot: -left-5 (-20px dari kartu = sumbu garis di x = 8px) lalu
-                -translate-x-1/2 menjadikan pusatnya tepat di garis.
-                top-1/2 + -translate-y-1/2 menaruhnya di tengah tinggi kartu. */}
+        {timelineItems.map((item) => (
+          <div key={item.year} className="relative z-10">
+            {/* Timeline Circle Dot */}
             <div
-              className="absolute -left-5 top-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full border-2 border-white shadow-sm"
+              className="absolute -left-[23px] top-15 w-3.5 h-3.5 rounded-full border-2 border-[#DBEAFE] shadow-sm shrink-0"
               style={{ backgroundColor: item.dotColor }}
             />
 
             {/* Content Card */}
             <div
-              className="p-4 shadow-md relative overflow-hidden"
+              className="p-3.5 sm:p-4 shadow-sm relative overflow-hidden break-words rounded-xl"
               style={{
-                borderRadius: "14px",
                 backgroundColor: item.cardBg,
               }}
             >
               {/* Year Badge */}
               <span
-                className="inline-flex items-center px-3.5 py-1.5 font-poppins font-bold leading-none rounded-full mb-2.5"
+                className="inline-flex items-center px-3 py-1 font-poppins font-bold leading-none rounded-full mb-2 text-[11px]"
                 style={{
-                  fontSize: "12px",
                   backgroundColor: item.badgeBg,
                   color: item.badgeText,
                 }}
@@ -149,16 +138,16 @@ export default function TimelineSection() {
 
               {/* Title */}
               <h3
-                className="font-poppins font-bold mb-1"
-                style={{ fontSize: "14px", color: item.textColor }}
+                className="font-poppins font-bold mb-1 text-[13px] break-words"
+                style={{ color: item.textColor }}
               >
                 {item.title}
               </h3>
 
               {/* Description */}
               <p
-                className="font-poppins leading-relaxed opacity-95"
-                style={{ fontSize: "12px", fontWeight: 400, color: item.textColor }}
+                className="font-poppins leading-relaxed opacity-95 text-[11px] font-normal break-words"
+                style={{ color: item.textColor }}
               >
                 {item.description}
               </p>
