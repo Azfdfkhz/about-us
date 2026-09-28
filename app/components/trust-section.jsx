@@ -39,20 +39,20 @@ const legalItems = [
 
 const reportYears = [
   {
-    year: 2021,
-    driveUrl: "https://drive.google.com/file/d/YOUR_DRIVE_REPORT_2021/view", // Ganti dengan Link Google Drive Laporan 2021
-  },
-  {
     year: 2022,
-    driveUrl: "https://drive.google.com/file/d/YOUR_DRIVE_REPORT_2022/view", // Ganti dengan Link Google Drive Laporan 2022
+    driveUrl: "https://drive.google.com/file/d/1sOEPPZXlGaEhGVeQnrPYlIKIARglUJCS/view",
   },
   {
     year: 2023,
-    driveUrl: "https://drive.google.com/file/d/YOUR_DRIVE_REPORT_2023/view", // Ganti dengan Link Google Drive Laporan 2023
+    driveUrl: "https://drive.google.com/file/d/1vGZMgQMPVWW2MnIKar-BqyDfUPyOkJJk/view", 
   },
   {
     year: 2024,
-    driveUrl: "https://drive.google.com/file/d/YOUR_DRIVE_REPORT_2024/view", // Ganti dengan Link Google Drive Laporan 2024
+    driveUrl: "https://drive.google.com/file/d/1s5eg7vWxw-tAtsUdBMfG2dKScAOA2oRT/view", 
+  },
+  {
+    year: 2025,
+    driveUrl: "https://drive.google.com/file/d/1pI_d8jY2FSxsdsTv8l-kI3ykP6iJl0lk/view", 
   },
 ];
 
