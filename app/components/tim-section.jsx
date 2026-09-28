@@ -4,32 +4,32 @@ const teamMembers = [
   {
     name: "Zaeni Ramdan",
     title: "Chief Executive Officer",
-    image: "/images/zaeni-ramdan.svg",
+    image: "/images/team/zaeni-ramdan.svg",
   },
   {
     name: "Indra Sayyidina",
     title: "Program Dept. Head",
-    image: "/images/indra-sayyidina.svg",
+    image: "/images/team/indra-sayyidina.svg",
   },
   {
     name: "Dzikri Fadilah",
     title: "Product Dept. Head",
-    image: "/images/dzikri-fadilah.svg",
+    image: "/images/team/dzikri-fadilah.svg",
   },
   {
     name: "Agustin Santriana",
     title: "Brand & Marketing Division Head",
-    image: "/images/agustin-santriana.svg",
+    image: "/images/team/agustin-santriana.svg",
   },
   {
     name: "Nur Shyfa",
     title: "Marketing Dept. Head",
-    image: "/images/nur-shyfa.svg",
+    image: "/images/team/nur-shyfa.svg",
   },
   {
     name: "Wiluk Lianawati",
     title: "Finance and Operational Dept. Head",
-    image: "/images/wiluk-lianawati.svg",
+    image: "/images/team/wiluk-lianawati.svg",
   },
 ];
 

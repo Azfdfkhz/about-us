@@ -118,11 +118,11 @@ export default function AmanahSection() {
         {/* Report SVG */}
         <div className="shrink-0">
           <Image
-            src="/images/report.svg"
+            src="/images/amanah/report.svg"
             alt="Report icon"
             width={125}
             height={125}
-            className="w-[95px] sm:w-[130px] h-auto object-contain"
+            className="w-23.75 sm:w-38.5 h-auto object-contain"
           />
         </div>
 

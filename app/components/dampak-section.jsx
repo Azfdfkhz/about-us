@@ -29,7 +29,7 @@ export default function DampakSection() {
         <div className="flex items-center gap-2 sm:gap-4 mb-4 pb-8">
           <div className="w-[195px] sm:w-[210px] shrink-0">
             <Image
-              src="/images/happines-gift.webp"
+              src="/images/dampak-nyata/happines-gift.webp"
               alt="Happines Gift illustration"
               width={350}
               height={270}
@@ -76,7 +76,7 @@ export default function DampakSection() {
             </div>
             <div className="shrink-0 ml-1">
               <img 
-                src="/images/oval-love-two.svg" 
+                src="/images/dampak-nyata/oval-love-two.svg" 
                 alt="Heart" 
                 className="w-5 h-5 sm:w-6 sm:h-6 object-contain" 
               />
@@ -101,7 +101,7 @@ export default function DampakSection() {
             </div>
             <div className="shrink-0 ml-1">
               <img 
-                src="/images/leaf-1.svg" 
+                src="/images/dampak-nyata/leaf-1.svg" 
                 alt="leaf" 
                 className="w-5 h-5 sm:w-6 sm:h-6 object-contain" 
               />
@@ -132,7 +132,7 @@ export default function DampakSection() {
             {/* Weather SVG icon */}
             <div className="absolute top-5 right-0 shrink-0">
               <Image
-                src="/images/weather.svg"
+                src="/images/dampak-nyata/weather.svg"
                 alt="Weather icon"
                 width={130}
                 height={150}
@@ -142,7 +142,7 @@ export default function DampakSection() {
 
           <div className="overflow-hidden relative w-full border border-gray-100">
             <img
-              src="/images/maps-lokasi.webp"
+              src="/images/dampak-nyata/maps-lokasi.webp"
               alt="maps lokasi"
               className="w-full h-52.5 object-cover"
               style={{
@@ -168,13 +168,13 @@ export default function DampakSection() {
           </div>
 
           {/* Happy children graphic at bottom */}
-          <div className="-mt-22 flex justify-center overflow-visible">
+          <div className="-mt-20 sm:-mt-22 flex justify-center overflow-visible">
             <Image
-              src="/images/Proposal-Aceh-Gebyar-Kemerdekaan.webp"
+              src="/images/dampak-nyata/Proposal-Aceh-Gebyar-Kemerdekaan.webp"
               alt="Anak-anak penerima manfaat Sharing Happiness"
-              width={320}
-              height={290}
-              className="w-155 max-w-none object-contain"
+              width={650}
+              height={400}
+              className="w-[550px] max-w-none object-contain pointer-events-none select-none"
             />
           </div>
 

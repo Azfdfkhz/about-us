@@ -2,32 +2,32 @@ import Image from "next/image";
 
 const features = [
   {
-    icon: "/images/transparan.svg",
+    icon: "/images/fitur/transparan.svg",
     title: "Transparan",
     description: "Setiap Donasi Dapat Dipantau Dengan Jelas Dan Terbuka.",
   },
   {
-    icon: "/images/transaksi-aman.svg",
+    icon: "/images/fitur/transaksi-aman.svg",
     title: "Transaksi Aman",
     description: "Sistem Pembayaran Terlindungi Untuk Menjaga Keamanan Setiap Transaksi.",
   },
   {
-    icon: "/images/Menciptakan-dampak-nyata.svg",
+    icon: "/images/fitur/Menciptakan-dampak-nyata.svg",
     title: "Menciptakan Dampak Nyata",
     description: "Setiap Kontribusi Memberikan Perubahan Yang Bisa Dirasakan Langsung.",
   },
   {
-    icon: "/images/kemudahan-donasi.svg",
+    icon: "/images/fitur/kemudahan-donasi.svg",
     title: "Kemudahan Donasi",
     description: "Proses Donasi Cepat, Praktis, Dan Dapat Diakses Kapan Saja.",
   },
   {
-    icon: "/images/NGO-terverifikasi.svg",
+    icon: "/images/fitur/NGO-terverifikasi.svg",
     title: "NGO Terverifikasi",
     description: "Bermitra Dengan Organisasi Terpercaya Yang Telah Terverifikasi.",
   },
   {
-    icon: "/images/laporan-program-detail.svg",
+    icon: "/images/fitur/laporan-program-detail.svg",
     title: "Laporan Program Detail",
     description: "Update Dan Laporan Lengkap Untuk Memastikan Donasimu Tersalurkan.",
   },

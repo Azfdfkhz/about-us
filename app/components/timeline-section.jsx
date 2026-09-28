@@ -106,7 +106,7 @@ export default function TimelineSection() {
       <div className="relative pl-6 space-y-4">
         {/* Continuous blue connecting line */}
         <div
-          className="absolute left-[7px] top-15 bottom-15 w-0.5 bg-[#3B82F6]"
+          className="absolute left-[7px] top-15 bottom-15 sm:bottom-11 w-0.5 bg-[#3B82F6]"
           style={{ zIndex: 0 }}
         />
 
@@ -114,13 +114,13 @@ export default function TimelineSection() {
           <div key={item.year} className="relative z-10">
             {/* Timeline Circle Dot */}
             <div
-              className="absolute -left-[23px] top-15 w-3.5 h-3.5 rounded-full border-2 border-[#DBEAFE] shadow-sm shrink-0"
+              className="absolute -left-5.75 top-15 w-3.5 h-3.5 rounded-full border-2 border-[#DBEAFE] shadow-sm shrink-0"
               style={{ backgroundColor: item.dotColor }}
             />
 
             {/* Content Card */}
             <div
-              className="p-3.5 sm:p-4 shadow-sm relative overflow-hidden break-words rounded-xl"
+              className="p-3.5 sm:p-4 shadow-sm relative overflow-hidden wrap-break-words rounded-xl"
               style={{
                 backgroundColor: item.cardBg,
               }}

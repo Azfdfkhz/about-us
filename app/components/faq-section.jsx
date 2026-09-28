@@ -68,9 +68,9 @@ export default function FaqSection() {
                 </span>
                 <span className="shrink-0 text-[#686C71]">
                   {openIdx === idx ? (
-                    <ChevronUp size={24} />
+                    <ChevronUp size={40} />
                   ) : (
-                    <ChevronDown size={24} />
+                    <ChevronDown size={40} />
                   )}
                 </span>
               </button>
@@ -99,7 +99,7 @@ export default function FaqSection() {
       >
         <div className="shrink-0">
           <Image
-            src="/images/bubbles-question.svg"
+            src="/images/faq/bubbles-question.svg"
             alt="Bubbles question icon"
             width={54}
             height={54}

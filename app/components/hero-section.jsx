@@ -15,7 +15,7 @@ export default function HeroSection() {
         style={{ top: "35px", right: "0px", width: "230px", height: "250px", zIndex: 1 }}
       >
         <Image
-          src="/images/happiness-academy-1.svg"
+          src="/images/hero/happiness-academy-1.svg"
           alt="Butterfly pattern"
           fill
           style={{ objectFit: "contain", objectPosition: "right top" }}
@@ -31,7 +31,7 @@ export default function HeroSection() {
             {/* Love SVG: 40px */}
             <div className="mb-4">
               <Image
-                src="/images/love.svg"
+                src="/images/hero/love.svg"
                 alt="Love icon"
                 width={40}
                 height={40}
@@ -70,7 +70,7 @@ export default function HeroSection() {
               style={{ top: "0px", right: "100px" }}
             >
               <Image
-                src="/images/1.svg"
+                src="/images/hero/1.webp"
                 alt="Circle 1"
                 width={85}
                 height={87}
@@ -84,7 +84,7 @@ export default function HeroSection() {
               style={{ top: "120px", right: "125px" }}
             >
               <Image
-                src="/images/2.svg"
+                src="/images/hero/2.webp"
                 alt="Circle 2"
                 width={47}
                 height={48}
@@ -98,7 +98,7 @@ export default function HeroSection() {
               style={{ top: "180px", right: "15px" }}
             >
               <Image
-                src="/images/3.svg"
+                src="/images/hero/3.webp"
                 alt="Circle 3"
                 width={53}
                 height={54}

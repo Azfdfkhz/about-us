@@ -12,7 +12,7 @@ export default function VisiMisiSection() {
           {/* Illustration SVG */}
           <div className="shrink-0 w-38.75 pt-1">
             <Image
-              src="/images/happiness-academy-2.svg"
+              src="/images/visi-misi/happiness-academy-2.svg"
               alt="Happiness Academy illustration"
               width={155}
               height={150}
@@ -42,7 +42,7 @@ export default function VisiMisiSection() {
         <div className="mb-6 pl-3">
           <div className="flex items-center gap-3 mb-2">
             <Image
-              src="/images/visi-kami.svg"
+              src="/images/visi-misi/visi-kami.svg"
               alt="Visi Kami"
               width={28}
               height={28}
@@ -64,7 +64,7 @@ export default function VisiMisiSection() {
         <div className="pl-3">
           <div className="flex items-center gap-3 mb-2">
             <Image
-              src="/images/misi-kami.svg"
+              src="/images/visi-misi/misi-kami.svg"
               alt="Misi Kami"
               width={28}
               height={28}
