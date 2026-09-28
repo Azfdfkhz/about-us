@@ -1,5 +1,6 @@
 "use client";
-import { Play } from 'lucide-react';
+import { useState } from 'react';
+import { Play, X } from 'lucide-react';
 
 const timelineItems = [
   {
@@ -60,6 +61,8 @@ const timelineItems = [
 ];
 
 export default function TimelineSection() {
+  const [isVideoOpen, setIsVideoOpen] = useState(false);
+
   return (
     <section className="px-4 pb-10">
       {/* Title */}
@@ -70,37 +73,60 @@ export default function TimelineSection() {
         Awal Mula Cerita Perjalanan Kami
       </h2>
       <p
-        className="font-poppins text-[#1E5BBB] mb-4 px-3.5"
-        style={{ fontSize: "10px", fontWeight: 400 }}
+        className="font-poppins text-[#1E5BBB] px-3.5 mb-5"
+        style={{ fontSize: "14px", fontWeight: 400 }}
       >
-        Dari satu langkah kecil, hingga perjalanan yang terus bertumbuh
+        Dari Satu Langkah Kecil, hingga Perjalanan yang Terus Bertumbuh
       </p>
 
-      {/* Video Container */}
+      {/* Video Container / Trigger Popup */}
       <div
-        className="w-full max-w-lg mx-auto mb-8 overflow-hidden shadow-lg group rounded-2xl"
+        onClick={() => setIsVideoOpen(true)}
+        className="w-full max-w-lg mx-auto mb-8 overflow-hidden shadow-lg group rounded-2xl cursor-pointer relative"
       >
-        <a
-          href="https://youtu.be/VDUBjAeCFmE"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="block relative w-full h-full"
-        >
-          {/* Mengambil thumbnail resolusi tinggi otomatis dari YouTube */}
-          <img
-            src="https://img.youtube.com/vi/VDUBjAeCFmE/maxresdefault.jpg"
-            alt="Cerita Perjalanan Kami"
-            className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500"
-          />
+        <img
+          src="https://img.youtube.com/vi/VDUBjAeCFmE/maxresdefault.jpg"
+          alt="Cerita Perjalanan Kami"
+          className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500"
+        />
 
-          {/* Lapisan transparan dan Ikon Play di tengah */}
-          <div className="absolute inset-0 bg-black/20 flex items-center justify-center group-hover:bg-black/10 transition-colors duration-300">
-            <div className="w-14 h-14 bg-[#f5f5f5] rounded-full flex items-center justify-center shadow-lg">
-              <Play className="w-7 h-7 text-[red] ml-1 fill-[red]" />
+        {/* Overlay & Play Icon */}
+        <div className="absolute inset-0 bg-black/20 flex items-center justify-center group-hover:bg-black/10 transition-colors duration-300">
+          <div className="w-14 h-14 bg-[#f5f5f5] rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+            <Play className="w-7 h-7 text-[red] ml-1 fill-[red]" />
+          </div>
+        </div>
+      </div>
+
+      {/* YouTube Video Modal Popup */}
+      {isVideoOpen && (
+        <div
+          onClick={() => setIsVideoOpen(false)}
+          className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4 transition-opacity animate-fadeIn"
+        >
+          <div
+            onClick={(e) => e.stopPropagation()}
+            className="relative w-full max-w-2xl bg-black rounded-2xl overflow-hidden shadow-2xl"
+          >
+            <button
+              onClick={() => setIsVideoOpen(false)}
+              className="absolute top-3 right-3 z-10 text-white bg-black/60 hover:bg-black/80 rounded-full p-2 transition-colors"
+              aria-label="Tutup Video"
+            >
+              <X size={20} />
+            </button>
+            <div className="relative pt-[56.25%] w-full">
+              <iframe
+                src="https://www.youtube.com/embed/VDUBjAeCFmE?autoplay=1"
+                title="Cerita Perjalanan Kami"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="absolute inset-0 w-full h-full border-0"
+              />
             </div>
           </div>
-        </a>
-      </div>
+        </div>
+      )}
 
       {/* Vertical Timeline */}
       <div className="relative pl-6 space-y-4">

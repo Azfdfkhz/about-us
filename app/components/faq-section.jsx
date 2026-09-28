@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { ChevronDown, ChevronUp } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 import { useState } from "react";
 
 const faqItems = [
@@ -66,23 +66,30 @@ export default function FaqSection() {
                 >
                   {item.question}
                 </span>
-                <span className="shrink-0 text-[#686C71]">
-                  {openIdx === idx ? (
-                    <ChevronUp size={40} />
-                  ) : (
-                    <ChevronDown size={40} />
-                  )}
+                <span className="shrink-0 text-[#686C71] transition-transform duration-300">
+                  <ChevronDown
+                    size={36}
+                    className={`transition-transform duration-300 ${
+                      openIdx === idx ? "rotate-180 text-[#5093D3]" : ""
+                    }`}
+                  />
                 </span>
               </button>
 
-              {openIdx === idx && (
-                <p
-                  className="font-poppins text-[#686C71] mt-2 leading-relaxed"
-                  style={{ fontSize: "13px", fontWeight: 500 }}
-                >
-                  {item.answer}
-                </p>
-              )}
+              <div
+                className={`grid transition-[grid-template-rows,opacity] duration-300 ease-in-out ${
+                  openIdx === idx ? "grid-rows-[1fr] opacity-100 mt-2" : "grid-rows-[0fr] opacity-0 mt-0"
+                }`}
+              >
+                <div className="overflow-hidden">
+                  <p
+                    className="font-poppins text-[#686C71] leading-relaxed"
+                    style={{ fontSize: "13px", fontWeight: 500 }}
+                  >
+                    {item.answer}
+                  </p>
+                </div>
+              </div>
             </div>
           ))}
         </div>
@@ -123,14 +130,14 @@ export default function FaqSection() {
           {/* Single horizontal line row: no wrap */}
           <div className="flex items-center gap-1.5 whitespace-nowrap">
             <button
-              className="px-2.5 py-1.5 font-poppins font-bold text-white rounded text-[10px] sm:text-[11px] shadow-sm active:scale-95 transition-transform shrink-0"
+              className="px-2.5 py-1.5 font-poppins font-bold text-white rounded text-[10px] sm:text-[11px] shadow-sm cursor-pointer hover:opacity-90 active:scale-95 transition-all shrink-0"
               style={{ backgroundColor: "#2E68B2" }}
             >
               Pusat Bantuan
             </button>
             <span className="font-poppins text-[#0047CA] text-[10px] sm:text-[11px] shrink-0">atau</span>
             <button
-              className="px-2.5 py-1.5 font-poppins font-bold text-[#0047CA] bg-white rounded border border-[#3A70C4] text-[10px] sm:text-[11px] shadow-sm active:scale-95 transition-transform shrink-0"
+              className="px-2.5 py-1.5 font-poppins font-bold text-[#0047CA] bg-white rounded border border-[#3A70C4] text-[10px] sm:text-[11px] shadow-sm cursor-pointer hover:bg-blue-50 active:scale-95 transition-all shrink-0"
             >
               Hubungi Kami
             </button>

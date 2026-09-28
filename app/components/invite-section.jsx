@@ -15,7 +15,7 @@ export default function InviteSection() {
           className="font-poppins font-extrabold mb-2"
           style={{ fontSize: "18px" }}
         >
-          Cerita Ini Belum usai
+          Cerita Ini Belum Usai
         </h2>
 
         <p

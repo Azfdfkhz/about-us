@@ -1,7 +1,17 @@
 "use client";
 
 import Image from "next/image";
+import dynamic from "next/dynamic";
 import { Heart, Leaf } from "lucide-react";
+
+const InteractiveMap = dynamic(() => import("./interactive-map"), {
+  ssr: false,
+  loading: () => (
+    <div className="w-full h-72 sm:h-80 rounded-2xl bg-blue-50/50 animate-pulse flex items-center justify-center text-[#1E5BBB] text-xs font-poppins">
+      Memuat Peta Sebaran Titik Kebaikan...
+    </div>
+  ),
+});
 
 const BASE = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
@@ -142,15 +152,8 @@ export default function ImpactSection() {
             </div>
           </div>
 
-          <div className="overflow-hidden relative w-full border border-gray-100">
-            <img
-              src={`${BASE}/images/real-impact/maps-location.webp`}
-              alt="maps lokasi"
-              className="w-full h-52.5 object-cover"
-              style={{
-                borderRadius: "16px",
-              }}
-            />
+          <div className="overflow-hidden relative w-full h-60 border border-gray-100 rounded-2xl my-2">
+            <InteractiveMap />
           </div>
 
           {/* Text middle below map */}

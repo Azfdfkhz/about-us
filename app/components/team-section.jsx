@@ -33,9 +33,9 @@ const teamMembers = [
   },
 ];
 
-export default function TimSection() {
+export default function TeamSection() {
   return (
-    <section className="px-4 sm:px-10 pb-10">
+    <section className="px-4 sm:px-6 pb-12">
       {/* Heading */}
       <h2
         className="font-poppins font-bold text-[#1E5BBB] leading-snug"
@@ -45,19 +45,19 @@ export default function TimSection() {
       </h2>
 
       <p
-        className="font-poppins text-[#1E5BBB] leading-snug mb-5 text-[11px] sm:text-[14px]"
+        className="font-poppins text-[#1E5BBB] leading-snug mb-8 text-[11px] sm:text-[14px]"
         style={{ fontWeight: 400 }}
       >
-        Dari satu langkah kecil, hingga perjalanan yang terus bertumbuh
+        Dari Satu Langkah Kecil, hingga Perjalanan yang Terus Bertumbuh
       </p>
 
-      {/* Team Grid: 2 columns on mobile (<640px), 3 columns on desktop (>=640px) */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-x-4 sm:gap-y-5 items-stretch">
-        {teamMembers.map((member) => (
+      <div className="grid grid-cols-2 gap-x-4 gap-y-6 items-start">
+        {teamMembers.map((member, idx) => (
           <div
             key={member.name}
-            className="flex flex-col h-full overflow-hidden rounded-t-xl"
-            // Container query: ukuran teks & padding mengikuti lebar kartu (cqw)
+            className={`flex flex-col h-full overflow-hidden rounded-t-[30px] ${
+              idx % 2 === 1 ? "mt-2 sm:mt-4" : "-mt-4 sm:-mt-5"
+            }`}
             style={{ containerType: "inline-size" }}
           >
             {/* Foto */}
@@ -66,7 +66,7 @@ export default function TimSection() {
                 src={member.image}
                 alt={member.name}
                 fill
-                sizes="(max-width: 640px) 50vw, 33vw"
+                sizes="50vw"
                 className="object-contain object-bottom"
               />
             </div>
@@ -75,8 +75,8 @@ export default function TimSection() {
             <div
               className="flex-1 bg-[#1E5BBB] text-white"
               style={{
-                marginTop: "-6cqw", // naikkan badge
-                padding: "4cqw 6cqw 9cqw",
+                marginTop: "-5cqw",
+                padding: "4cqw 10cqw 9cqw",
                 clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 85%)",
               }}
             >

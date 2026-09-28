@@ -26,8 +26,8 @@ export default function VisionMissionSection() {
               className="font-poppins text-[#7B7B7B] leading-tight mb-2"
               style={{ fontSize: "20px", fontWeight: 400 }}
             >
-              Setiap perjalanan besar selalu berawal dari{" "}
-              <span className="font-bold text-[#7B7B7B]">satu keyakinan</span>
+              Setiap Perjalanan Besar Selalu Berawal dari{" "}
+              <span className="font-bold text-[#7B7B7B]">Satu Keyakinan</span>
             </p>
             <p
               className="font-poppins text-[#7B7B7B] leading-relaxed"
