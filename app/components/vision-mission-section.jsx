@@ -2,7 +2,9 @@ import Image from "next/image";
 
 export default function VisionMissionSection() {
   return (
-    <section className="z-20 -mt-20">
+    <section className="z-20 -mt-28
+     sm:-mt-20
+    ">
       <div
         className="bg-white p-5 relative"
         style={{ borderRadius: "15px" }}
