@@ -57,34 +57,30 @@ export default function TeamSection() {
           return (
             <div
               key={member.name}
-              className="flex flex-col h-full rounded-t-[30px]"
+              className={`flex flex-col rounded-t-[30px] ${
+                !isLeft ? "mt-3.5 sm:mt-4.5" : ""
+              }`}
               style={{ containerType: "inline-size" }}
             >
-              {/* Foto: Kolom kiri berada di atas */}
-              <div
-                className="relative w-full bg-[#FFCC0A] rounded-t-[30px] overflow-hidden"
-                style={{
-                  height: isLeft ? "105cqw" : "97cqw",
-                  marginTop: isLeft ? "-8cqw" : "0cqw",
-                }}
-              >
+              {/* Foto */}
+              <div className="relative w-full aspect-[196/190] bg-[#FFCC0A] rounded-t-[30px] overflow-hidden">
                 <Image
                   src={member.image}
                   alt={member.name}
                   fill
                   sizes="50vw"
-                  className={`object-contain object-bottom ${
-                    isLeft ? "-translate-y-[2cqw]" : ""
-                  }`}
+                  className="object-contain object-bottom"
                 />
               </div>
 
-              {/* Badge biru dengan sisi bawah miring: Tetap sejajar dengan yang sebelahnya */}
+              {/* Badge biru dengan sisi bawah miring: 100% sejajar antara kiri dan kanan */}
               <div
-                className="flex-1 bg-[#1E5BBB] text-white flex flex-col justify-center min-h-[30cqw]"
+                className="bg-[#1E5BBB] text-white flex flex-col justify-start"
                 style={{
                   marginTop: "-5cqw",
                   padding: "4cqw 6cqw 8cqw",
+                  height: "36cqw",
+                  minHeight: "36cqw",
                   clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 85%)",
                 }}
               >

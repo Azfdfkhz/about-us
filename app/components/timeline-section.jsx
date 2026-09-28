@@ -9,7 +9,7 @@ const timelineItems = [
     description:
       "Lahirnya platform SharingHappiness yang menghapus batasan jarak untuk menghubungkan niat baik secara digital.",
     cardBg: "#FFE87C",
-    badgeBg: "#1E5BBB",
+    badgeBg: "#FDCB09/40",
     badgeText: "#FFFFFF",
     textColor: "#000000",
     dotColor: "#1E5BBB",
@@ -19,7 +19,7 @@ const timelineItems = [
     title: "Open Ecosystem",
     description:
       "Perluasan akses bagi publik untuk menginisiasi gerakan sosial secara mandiri sebagai bentuk demokratisasi kebaikan.",
-    cardBg: "#2563EB",
+    cardBg: "#1E5BBB",
     badgeBg: "#FDCB09",
     badgeText: "#000000",
     textColor: "#FFFFFF",
@@ -30,7 +30,7 @@ const timelineItems = [
     title: "Strategic Independence",
     description:
       "Pembentukan entitas mandiri yang beroperasi secara profesional dan akuntabel guna memperkuat kepercayaan publik.",
-    cardBg: "#FFE87C",
+    cardBg: "#FDCB09/40",
     badgeBg: "#1E5BBB",
     badgeText: "#FFFFFF",
     textColor: "#000000",
@@ -41,7 +41,7 @@ const timelineItems = [
     title: "New Identity",
     description:
       "Pelaksanaan rebranding besar untuk menciptakan identitas yang lebih inklusif, modern, dan mampu menjangkau audiens universal.",
-    cardBg: "#2563EB",
+    cardBg: "#1E5BBB",
     badgeBg: "#FDCB09",
     badgeText: "#000000",
     textColor: "#FFFFFF",
@@ -52,7 +52,7 @@ const timelineItems = [
     title: "Data-Driven Impact",
     description:
       "Pengembangan integrasi data untuk memastikan setiap dampak kebaikan terukur dan terverifikasi secara akurat serta real-time.",
-    cardBg: "#FFE87C",
+    cardBg: "#FDCB09/40",
     badgeBg: "#1E5BBB",
     badgeText: "#FFFFFF",
     textColor: "#000000",
@@ -153,7 +153,7 @@ export default function TimelineSection() {
             >
               {/* Year Badge */}
               <span
-                className="inline-flex items-center px-3 py-1 font-poppins font-bold leading-none rounded-full mb-2 text-[11px]"
+                className="inline-flex items-center px-3 py-1 font-poppins font-regular leading-none rounded-full mb-2 text-[11px]"
                 style={{
                   backgroundColor: item.badgeBg,
                   color: item.badgeText,
