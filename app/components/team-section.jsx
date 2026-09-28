@@ -77,7 +77,7 @@ export default function TimSection() {
               style={{
                 marginTop: "-6cqw", // naikkan badge
                 padding: "4cqw 6cqw 9cqw",
-                clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 91%)",
+                clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 85%)",
               }}
             >
               <p
