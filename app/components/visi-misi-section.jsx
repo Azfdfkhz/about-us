@@ -10,7 +10,7 @@ export default function VisiMisiSection() {
         {/* Top Section: Illustration Left + Headline Right */}
         <div className="flex items-start gap-3 mb-5">
           {/* Illustration SVG */}
-          <div className="shrink-0 w-[155px] pt-1">
+          <div className="shrink-0 w-38.75 pt-1">
             <Image
               src="/images/happiness-academy-2.svg"
               alt="Happiness Academy illustration"

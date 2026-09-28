@@ -35,7 +35,7 @@ const features = [
 
 export default function FiturSection() {
   return (
-    <section className="px-4 pb-10">
+    <section className="relative z-10 px-4 pb-10">
       <h2
         className="font-poppins font-bold text-[#1E5BBB] text-center mb-5"
         style={{ fontSize: "16px" }}
@@ -44,11 +44,11 @@ export default function FiturSection() {
       </h2>
 
       {/* px-8 dihapus & maxWidth kartu dihilangkan: kartu mengisi penuh tiap kolom */}
-      <div className="grid grid-cols-2 gap-3">
-        {features.map((item) => (
+      <div className="flex flex-wrap gap-3">
+        {features.map((item, idx) => (
           <div
-            key={item.title}
-            className="bg-white p-4 flex flex-col gap-2.5 h-full transition-shadow hover:shadow-lg"
+            key={idx}
+            className="relative bg-white p-4 flex flex-col gap-2.5 w-[calc(50%-6px)] transition-shadow hover:shadow-lg"
             style={{
               borderRadius: "12px",
               boxShadow: "0 4px 14px rgba(0, 0, 0, 0.08)",

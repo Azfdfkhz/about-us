@@ -1,7 +1,7 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "Tentang Kami - Sharing Happiness",
+  title: "Sharing Happiness - about us",
   description: "Setiap Kebaikan Selalu Memiliki Cerita",
 };
 
