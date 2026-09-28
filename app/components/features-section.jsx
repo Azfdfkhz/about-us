@@ -2,38 +2,38 @@ import Image from "next/image";
 
 const features = [
   {
-    icon: "/images/fitur/transparan.svg",
+    icon: "/images/features/transparent.svg",
     title: "Transparan",
     description: "Setiap Donasi Dapat Dipantau Dengan Jelas Dan Terbuka.",
   },
   {
-    icon: "/images/fitur/transaksi-aman.svg",
+    icon: "/images/features/secure-transaction.svg",
     title: "Transaksi Aman",
     description: "Sistem Pembayaran Terlindungi Untuk Menjaga Keamanan Setiap Transaksi.",
   },
   {
-    icon: "/images/fitur/Menciptakan-dampak-nyata.svg",
+    icon: "/images/features/creating-real-impact.svg",
     title: "Menciptakan Dampak Nyata",
     description: "Setiap Kontribusi Memberikan Perubahan Yang Bisa Dirasakan Langsung.",
   },
   {
-    icon: "/images/fitur/kemudahan-donasi.svg",
+    icon: "/images/features/ease-of-donation.svg",
     title: "Kemudahan Donasi",
     description: "Proses Donasi Cepat, Praktis, Dan Dapat Diakses Kapan Saja.",
   },
   {
-    icon: "/images/fitur/NGO-terverifikasi.svg",
+    icon: "/images/features/verified-ngo.svg",
     title: "NGO Terverifikasi",
     description: "Bermitra Dengan Organisasi Terpercaya Yang Telah Terverifikasi.",
   },
   {
-    icon: "/images/fitur/laporan-program-detail.svg",
+    icon: "/images/features/detailed-program-report.svg",
     title: "Laporan Program Detail",
     description: "Update Dan Laporan Lengkap Untuk Memastikan Donasimu Tersalurkan.",
   },
 ];
 
-export default function FiturSection() {
+export default function FeaturesSection() {
   return (
     <section className="relative z-10 px-4 pb-10">
       <h2

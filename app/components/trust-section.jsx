@@ -32,7 +32,7 @@ const legalItems = [
 
 const reportYears = [2021, 2022, 2023, 2024];
 
-export default function AmanahSection() {
+export default function TrustSection() {
   return (
     <section className="px-6 py-6">
       {/* Light blue shape container */}
@@ -118,7 +118,7 @@ export default function AmanahSection() {
         {/* Report SVG */}
         <div className="shrink-0">
           <Image
-            src="/images/amanah/report.svg"
+            src="/images/trust/report.svg"
             alt="Report icon"
             width={125}
             height={125}

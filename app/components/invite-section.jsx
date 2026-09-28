@@ -1,6 +1,6 @@
 "use client";
 
-export default function AjakSection() {
+export default function InviteSection() {
   return (
     // px-4 dihapus supaya shape biru menempel ke ujung kiri & kanan layar
     <section className="pb-10">

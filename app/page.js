@@ -1,11 +1,11 @@
 import HeroSection from "./components/hero-section";
-import VisiMisiSection from "./components/visi-misi-section";
-import AmanahSection from "./components/amanah-section";
-import DampakSection from "./components/dampak-section";
+import VisionMissionSection from "./components/vision-mission-section";
+import TrustSection from "./components/trust-section";
+import ImpactSection from "./components/impact-section";
 import TimelineSection from "./components/timeline-section";
-import TimSection from "./components/tim-section";
-import AjakSection from "./components/ajak-section";
-import FiturSection from "./components/fitur-section";
+import TeamSection from "./components/team-section";
+import InviteSection from "./components/invite-section";
+import FeaturesSection from "./components/features-section";
 import FaqSection from "./components/faq-section";
 
 export default function Home() {
@@ -15,25 +15,25 @@ export default function Home() {
       <HeroSection />
 
       {/* Bagian 2: Visi & Misi Kami */}
-      <VisiMisiSection />
+      <VisionMissionSection />
 
       {/* Bagian 3: Setiap donasi adalah Amanah & Laporan Keuangan */}
-      <AmanahSection />
+      <TrustSection />
 
       {/* Bagian 4: Bersama Kita Telah Menciptakan Dampak Nyata */}
-      <DampakSection />
+      <ImpactSection />
 
       {/* Bagian 5: Awal Mula Cerita Perjalanan Kami (Timeline) */}
       <TimelineSection />
 
       {/* Bagian 6: Happiness Team di Balik Cerita Ini (Tim Kami) */}
-      <TimSection />
+      <TeamSection />
 
       {/* Bagian 7: Cerita Ini Belum usai (Ajak Bergabung) */}
-      <AjakSection />
+      <InviteSection />
 
       {/* Bagian 8: Kenapa Berdonasi Bersama Kami? (Fitur Layanan) */}
-      <FiturSection />
+      <FeaturesSection />
 
       {/* Bagian 9: Hal yang Sering Ditanyakan (FAQ) */}
       <FaqSection />

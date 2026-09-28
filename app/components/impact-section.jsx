@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { Heart, Leaf } from "lucide-react";
 
-export default function DampakSection() {
+export default function ImpactSection() {
   return (
     <section className="pb-3">
       {/* Yellow to white gradient container */}
@@ -29,7 +29,7 @@ export default function DampakSection() {
         <div className="flex items-center gap-2 sm:gap-4 mb-4 pb-8">
           <div className="w-[195px] sm:w-[210px] shrink-0">
             <Image
-              src="/images/dampak-nyata/happines-gift.webp"
+              src="/images/real-impact/happines-gift.webp"
               alt="Happines Gift illustration"
               width={350}
               height={270}
@@ -76,7 +76,7 @@ export default function DampakSection() {
             </div>
             <div className="shrink-0 ml-1">
               <img 
-                src="/images/dampak-nyata/oval-love-two.svg" 
+                src="/images/real-impact/oval-love-two.svg" 
                 alt="Heart" 
                 className="w-5 h-5 sm:w-6 sm:h-6 object-contain" 
               />
@@ -101,7 +101,7 @@ export default function DampakSection() {
             </div>
             <div className="shrink-0 ml-1">
               <img 
-                src="/images/dampak-nyata/leaf-1.svg" 
+                src="/images/real-impact/leaf-1.svg" 
                 alt="leaf" 
                 className="w-5 h-5 sm:w-6 sm:h-6 object-contain" 
               />
@@ -132,7 +132,7 @@ export default function DampakSection() {
             {/* Weather SVG icon */}
             <div className="absolute top-5 right-0 shrink-0">
               <Image
-                src="/images/dampak-nyata/weather.svg"
+                src="/images/real-impact/weather.svg"
                 alt="Weather icon"
                 width={130}
                 height={150}
@@ -142,7 +142,7 @@ export default function DampakSection() {
 
           <div className="overflow-hidden relative w-full border border-gray-100">
             <img
-              src="/images/dampak-nyata/maps-lokasi.webp"
+              src="/images/real-impact/maps-location.webp"
               alt="maps lokasi"
               className="w-full h-52.5 object-cover"
               style={{
@@ -170,7 +170,7 @@ export default function DampakSection() {
           {/* Happy children graphic at bottom */}
           <div className="-mt-20 sm:-mt-22 flex justify-center overflow-visible">
             <Image
-              src="/images/dampak-nyata/Proposal-Aceh-Gebyar-Kemerdekaan.webp"
+              src="/images/real-impact/beneficiary-children.webp"
               alt="Anak-anak penerima manfaat Sharing Happiness"
               width={650}
               height={400}
