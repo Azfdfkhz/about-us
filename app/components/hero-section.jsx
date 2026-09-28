@@ -70,7 +70,7 @@ export default function HeroSection() {
               style={{ top: "0px", right: "100px" }}
             >
               <Image
-                src="/images/hero/1.webp"
+                src="/images/1.webp"
                 alt="Circle 1"
                 width={85}
                 height={87}
