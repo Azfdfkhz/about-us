@@ -2,6 +2,15 @@
 import { useState } from 'react';
 import { Play, X } from 'lucide-react';
 
+// helper: hex + opacity (0–1) -> rgba()
+const withOpacity = (hex, opacity = 1) => {
+  const h = hex.replace("#", "");
+  const r = parseInt(h.slice(0, 2), 16);
+  const g = parseInt(h.slice(2, 4), 16);
+  const b = parseInt(h.slice(4, 6), 16);
+  return `rgba(${r}, ${g}, ${b}, ${opacity})`;
+};
+
 const timelineItems = [
   {
     year: "2016",
@@ -9,7 +18,9 @@ const timelineItems = [
     description:
       "Lahirnya platform SharingHappiness yang menghapus batasan jarak untuk menghubungkan niat baik secara digital.",
     cardBg: "#FFE87C",
-    badgeBg: "#FDCB09/40",
+    cardOpacity: 1,
+    badgeBg: "#1E5BBB",
+    badgeOpacity: 1,
     badgeText: "#FFFFFF",
     textColor: "#000000",
     dotColor: "#1E5BBB",
@@ -20,7 +31,9 @@ const timelineItems = [
     description:
       "Perluasan akses bagi publik untuk menginisiasi gerakan sosial secara mandiri sebagai bentuk demokratisasi kebaikan.",
     cardBg: "#1E5BBB",
+    cardOpacity: 1,
     badgeBg: "#FDCB09",
+    badgeOpacity: 1,
     badgeText: "#000000",
     textColor: "#FFFFFF",
     dotColor: "#93C5FD",
@@ -30,8 +43,10 @@ const timelineItems = [
     title: "Strategic Independence",
     description:
       "Pembentukan entitas mandiri yang beroperasi secara profesional dan akuntabel guna memperkuat kepercayaan publik.",
-    cardBg: "#FDCB09/40",
+    cardBg: "#FDCB09",
+    cardOpacity: 0.4,
     badgeBg: "#1E5BBB",
+    badgeOpacity: 1,
     badgeText: "#FFFFFF",
     textColor: "#000000",
     dotColor: "#1E5BBB",
@@ -42,7 +57,9 @@ const timelineItems = [
     description:
       "Pelaksanaan rebranding besar untuk menciptakan identitas yang lebih inklusif, modern, dan mampu menjangkau audiens universal.",
     cardBg: "#1E5BBB",
+    cardOpacity: 1,
     badgeBg: "#FDCB09",
+    badgeOpacity: 1,
     badgeText: "#000000",
     textColor: "#FFFFFF",
     dotColor: "#93C5FD",
@@ -52,8 +69,10 @@ const timelineItems = [
     title: "Data-Driven Impact",
     description:
       "Pengembangan integrasi data untuk memastikan setiap dampak kebaikan terukur dan terverifikasi secara akurat serta real-time.",
-    cardBg: "#FDCB09/40",
+    cardBg: "#FDCB09",
+    cardOpacity: 0.4,
     badgeBg: "#1E5BBB",
+    badgeOpacity: 1,
     badgeText: "#FFFFFF",
     textColor: "#000000",
     dotColor: "#1E5BBB",
@@ -148,14 +167,14 @@ export default function TimelineSection() {
             <div
               className="p-3.5 sm:p-4 shadow-sm relative overflow-hidden wrap-break-words rounded-xl"
               style={{
-                backgroundColor: item.cardBg,
+                backgroundColor: withOpacity(item.cardBg, item.cardOpacity),
               }}
             >
               {/* Year Badge */}
               <span
                 className="inline-flex items-center px-3 py-1 font-poppins font-regular leading-none rounded-full mb-2 text-[11px]"
                 style={{
-                  backgroundColor: item.badgeBg,
+                  backgroundColor: withOpacity(item.badgeBg, item.badgeOpacity),
                   color: item.badgeText,
                 }}
               >
