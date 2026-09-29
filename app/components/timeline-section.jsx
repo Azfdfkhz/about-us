@@ -17,8 +17,8 @@ const timelineItems = [
     title: "THE GENESIS",
     description:
       "Lahirnya platform SharingHappiness yang menghapus batasan jarak untuk menghubungkan niat baik secara digital.",
-    cardBg: "#FFE87C",
-    cardOpacity: 1,
+    cardBg: "#FDCB09",
+    cardOpacity: 0.4,
     badgeBg: "#1E5BBB",
     badgeOpacity: 1,
     badgeText: "#FFFFFF",
