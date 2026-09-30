@@ -2,7 +2,6 @@
 import { useState } from 'react';
 import { Play, X } from 'lucide-react';
 
-// helper: hex + opacity (0–1) -> rgba()
 const withOpacity = (hex, opacity = 1) => {
   const h = hex.replace("#", "");
   const r = parseInt(h.slice(0, 2), 16);
@@ -84,7 +83,6 @@ export default function TimelineSection() {
 
   return (
     <section className="px-4 pb-10">
-      {/* Title */}
       <h2
         className="font-poppins font-bold text-[#1E5BBB] mb-0.5 px-3.5"
         style={{ fontSize: "14px" }}
@@ -98,7 +96,6 @@ export default function TimelineSection() {
         Dari Satu Langkah Kecil, hingga Perjalanan yang Terus Bertumbuh
       </p>
 
-      {/* Video Container / Trigger Popup */}
       <div
         onClick={() => setIsVideoOpen(true)}
         className="w-full max-w-lg mx-auto mb-8 overflow-hidden shadow-lg group rounded-2xl cursor-pointer relative"
@@ -109,7 +106,6 @@ export default function TimelineSection() {
           className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500"
         />
 
-        {/* Overlay & Play Icon */}
         <div className="absolute inset-0 bg-black/20 flex items-center justify-center group-hover:bg-black/10 transition-colors duration-300">
           <div className="w-14 h-14 bg-[#f5f5f5] rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
             <Play className="w-7 h-7 text-[red] ml-1 fill-[red]" />
@@ -117,7 +113,6 @@ export default function TimelineSection() {
         </div>
       </div>
 
-      {/* YouTube Video Modal Popup */}
       {isVideoOpen && (
         <div
           onClick={() => setIsVideoOpen(false)}
@@ -147,9 +142,7 @@ export default function TimelineSection() {
         </div>
       )}
 
-      {/* Vertical Timeline */}
       <div className="relative pl-6 space-y-4">
-        {/* Continuous blue connecting line */}
         <div
           className="absolute left-[7px] top-15 bottom-15 sm:bottom-11 w-0.5 bg-[#3B82F6]"
           style={{ zIndex: 0 }}
@@ -157,20 +150,17 @@ export default function TimelineSection() {
 
         {timelineItems.map((item) => (
           <div key={item.year} className="relative z-10">
-            {/* Timeline Circle Dot */}
             <div
               className="absolute -left-5.75 top-15 w-3.5 h-3.5 rounded-full border-2 border-[#DBEAFE] shadow-sm shrink-0"
               style={{ backgroundColor: item.dotColor }}
             />
 
-            {/* Content Card */}
             <div
               className="p-3.5 sm:p-4 shadow-sm relative overflow-hidden wrap-break-words rounded-xl"
               style={{
                 backgroundColor: withOpacity(item.cardBg, item.cardOpacity),
               }}
             >
-              {/* Year Badge */}
               <span
                 className="inline-flex items-center px-3 py-1 font-poppins font-regular leading-none rounded-full mb-2 text-[11px]"
                 style={{
@@ -181,7 +171,6 @@ export default function TimelineSection() {
                 {item.year}
               </span>
 
-              {/* Title */}
               <h3
                 className="font-poppins font-bold mb-1 text-[13px] break-words"
                 style={{ color: item.textColor }}
@@ -189,7 +178,6 @@ export default function TimelineSection() {
                 {item.title}
               </h3>
 
-              {/* Description */}
               <p
                 className="font-poppins leading-relaxed opacity-95 text-[11px] font-normal break-words"
                 style={{ color: item.textColor }}

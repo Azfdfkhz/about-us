@@ -2,7 +2,6 @@
 
 export default function InviteSection() {
   return (
-    // px-4 dihapus supaya shape biru menempel ke ujung kiri & kanan layar
     <section className="pb-10">
       <div
         className="w-full p-6 text-center text-white shadow-md"
@@ -27,7 +26,6 @@ export default function InviteSection() {
           <span className="font-bold">di perjalanan selanjutnya.</span>
         </p>
 
-        {/* 2 Buttons */}
         <div className="flex gap-3 justify-center w-full">
           <button
             className="flex-1 py-2.5 px-3 font-poppins font-bold transition-all hover:bg-gray-100 active:scale-95 shadow-sm"

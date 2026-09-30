@@ -17,7 +17,6 @@ const BASE = process.env.NEXT_PUBLIC_BASE_PATH || "";
 export default function ImpactSection() {
   return (
     <section className="pb-3">
-      {/* Yellow to white gradient container */}
       <div
         className="relative overflow-hidden p-5 pt-8"
         style={{
@@ -25,7 +24,6 @@ export default function ImpactSection() {
           background: "linear-gradient(to bottom, #FDCB09 0%, #FEDF64 45%, #FFFFFF 100%)",
         }}
       >
-        {/* Title */}
         <div className="text-center mb-6">
           <h2
             className="font-poppins text-[#1E5BBB]"
@@ -36,7 +34,6 @@ export default function ImpactSection() {
           </h2>
         </div>
 
-        {/* Hero Image + Total Donasi 800M+ */}
         <div className="flex items-center gap-2 sm:gap-4 mb-4 pb-8">
           <div className="w-[195px] sm:w-[210px] shrink-0">
             <Image
@@ -67,9 +64,7 @@ export default function ImpactSection() {
           </div>
         </div>
 
-        {/* 2 White Stat Cards (Naik ke atas menumpuk bagian bawah ilustrasi) */}
         <div className="grid grid-cols-2 gap-2.5 sm:gap-3.5 mb-6 px-1 -mt-17 sm:-mt-19 relative z-10">
-          {/* Card 1: 40Jt+ */}
           <div
             className="bg-white p-3 sm:p-4 rounded-xl shadow-sm flex items-end justify-between border border-yellow-100/60 min-h-[76px] sm:min-h-[85px]"
           >
@@ -94,7 +89,6 @@ export default function ImpactSection() {
             </div>
           </div>
 
-          {/* Card 2: 300+ */}
           <div
             className="bg-white p-3 sm:p-4 rounded-xl shadow-sm flex items-end justify-between border border-yellow-100/60 min-h-[76px] sm:min-h-[85px]"
           >
@@ -120,7 +114,6 @@ export default function ImpactSection() {
           </div>
         </div>
 
-        {/* Inner Card (Sebaran Titik Kebaikan & Map) */}
         <div
           className="relative bg-[#FFFDFD] p-4 mb-4"
           style={{ borderRadius: "14px" }}
@@ -140,7 +133,6 @@ export default function ImpactSection() {
                 Peta ini menggambarkan luasnya jangkauan penyaluran program SharingHappiness. Setiap titik menjadi bukti hadirnya bantuan, kepedulian, dan kolaborasi untuk menciptakan dampak nyata.
               </p>
             </div>
-            {/* Weather SVG icon */}
             <div className="absolute top-5 right-0 shrink-0">
               <Image
                 src="/images/real-impact/weather.svg"
@@ -155,7 +147,6 @@ export default function ImpactSection() {
             <InteractiveMap />
           </div>
 
-          {/* Text middle below map */}
           <div className="text-center px-5 py-6">
             <p
               className="font-poppins text-[#1E5BBB] leading-relaxed"
@@ -171,7 +162,6 @@ export default function ImpactSection() {
             </p>
           </div>
 
-          {/* Happy children graphic at bottom */}
           <div className="-mt-8 sm:-mt-22 flex justify-center overflow-hidden sm:overflow-visible">
             <Image
               src="/images/real-impact/beneficiary-children.webp"
@@ -182,7 +172,6 @@ export default function ImpactSection() {
             />
           </div>
 
-          {/* Source / Data */}
           <div className="text-right mt-1 pr-1">
             <p
               className="font-poppins italic text-[#1E5BBB]"

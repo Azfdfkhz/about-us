@@ -59,7 +59,6 @@ const reportYears = [
 export default function TrustSection() {
   return (
     <section className="px-6 py-6">
-      {/* Light blue shape container */}
       <div
         className="relative overflow-hidden p-5"
         style={{
@@ -67,7 +66,6 @@ export default function TrustSection() {
           backgroundColor: "rgba(219, 234, 254, 0.34)",
         }}
       >
-        {/* ShieldCheck Watermark Icon */}
         <div
           className="absolute pointer-events-none"
           style={{
@@ -81,7 +79,6 @@ export default function TrustSection() {
         </div>
 
         <div className="relative z-10">
-          {/* Header */}
           <h2
             className="font-poppins font-bold text-[#1E5BBB] text-center mb-1.5"
             style={{ fontSize: "14px" }}
@@ -89,7 +86,6 @@ export default function TrustSection() {
             Setiap donasi adalah Amanah
           </h2>
 
-          {/* Subtitle */}
           <p
             className="font-poppins text-[#7B7B7B] text-center mb-4 leading-relaxed"
             style={{ fontSize: "12px", fontWeight: 500 }}
@@ -97,7 +93,6 @@ export default function TrustSection() {
             Sharing Happiness berkomitmen menjalankan seluruh program secara legal, transparan, dan dapat dipertanggungjawabkan.
           </p>
 
-          {/* Legal Items */}
           <div className="space-y-3">
             {legalItems.map((item, idx) => (
               <div key={idx}>
@@ -132,7 +127,6 @@ export default function TrustSection() {
         </div>
       </div>
 
-      {/* Description below shape */}
       <p
         className="font-poppins text-[#7B7B7B] mt-4 px-3 leading-relaxed text-justify"
         style={{ fontSize: "12px", fontWeight: 500 }}
@@ -140,7 +134,6 @@ export default function TrustSection() {
         Kepercayaan Anda adalah tanggung jawab kami. Setiap kebaikan yang dititipkan dikelola dengan penuh kehati-hatian dan dicatat secara transparan. Laporan keuangan kami tersedia secara terbuka agar setiap kebaikan dapat dipertanggungjawabkan.
       </p>
 
-      {/* Laporan Keuangan Header */}
       <h3
         className="font-poppins text-[#1E5BBB] mt-6 mb-3 sm:mb-4 px-3 text-[14px] sm:text-[17px]"
       >
@@ -148,9 +141,7 @@ export default function TrustSection() {
         <span className="font-normal">Sharing Happiness</span>
       </h3>
 
-      {/* Laporan Keuangan Section with report.svg */}
       <div className="flex items-center gap-2 sm:gap-3 px-1 sm:px-3">
-        {/* Report SVG */}
         <div className="shrink-0">
           <Image
             src="/images/trust/report.svg"
@@ -161,7 +152,6 @@ export default function TrustSection() {
           />
         </div>
 
-        {/* 4 Report Buttons */}
         <div className="flex flex-col gap-2 sm:gap-2.5 flex-1 min-w-0">
           {reportYears.map((report) => (
             <a

@@ -3,17 +3,11 @@
 import { useEffect, useState } from "react";
 import PageSkeleton from "./page-skeleton";
 
-const MIN_DISPLAY_MS = 600; // supaya skeleton tidak berkedip sekilas
-const MAX_WAIT_MS = 5000; // batas aman kalau ada aset yang lambat
+const MIN_DISPLAY_MS = 600;
+const MAX_WAIT_MS = 5000;
 const FADE_MS = 500;
 
-/**
- * Menampilkan skeleton satu halaman penuh di atas konten asli sampai
- * halaman siap (semua aset dimuat + font siap), lalu memudar.
- * Konten asli tetap dirender di bawahnya agar gambar mulai dimuat.
- */
 export default function PageLoader({ children }) {
-  // "loading" -> "fading" -> "done"
   const [phase, setPhase] = useState("loading");
 
   useEffect(() => {
@@ -61,7 +55,6 @@ export default function PageLoader({ children }) {
         </div>
       )}
 
-      {/* Tanpa JavaScript, jangan biarkan skeleton menutupi konten selamanya */}
       <noscript>
         <style>{".page-skeleton{display:none}"}</style>
       </noscript>

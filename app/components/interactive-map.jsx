@@ -5,7 +5,6 @@ import maplibregl from "maplibre-gl";
 import "maplibre-gl/dist/maplibre-gl.css";
 import MapSkeleton from "./map-skeleton";
 
-// Koordinat dalam format [lng, lat] (kebalikan dari Leaflet yang [lat, lng])
 const locations = [
   { name: "Sumatera Barat", coords: [100.4172, -0.9471] },
   { name: "Bengkulu", coords: [102.2608, -3.7928] },
@@ -77,7 +76,6 @@ export default function InteractiveMap() {
   useEffect(() => {
     if (!containerRef.current) return;
 
-    // Batas seluruh titik (termasuk Palestina) untuk tujuan zoom out
     const bounds = locations.reduce(
       (b, loc) => b.extend(loc.coords),
       new maplibregl.LngLatBounds(locations[0].coords, locations[0].coords)
@@ -86,22 +84,18 @@ export default function InteractiveMap() {
     const map = new maplibregl.Map({
       container: containerRef.current,
       style: mapStyle,
-      // Tampilan awal: fokus ke Indonesia
       center: [115, -4.5],
       zoom: 2.8,
       attributionControl: { compact: true },
-      // Scroll 2 jari (trackpad) / scroll mouse untuk zoom, cubit 2 jari di layar sentuh
       scrollZoom: true,
       touchZoomRotate: true,
     });
 
-    // Tombol zoom di sisi kanan
     map.addControl(
       new maplibregl.NavigationControl({ showCompass: false }),
       "top-right"
     );
 
-    // Zoom out baru dijalankan sekali, saat peta sudah siap DAN terlihat di layar
     let zoomOutTimer;
     let isLoaded = false;
     let isVisible = false;
@@ -135,11 +129,10 @@ export default function InteractiveMap() {
           isVisible = entry.isIntersecting;
           playZoomOut();
         },
-        { threshold: 0.6 } // 60% area peta terlihat
+        { threshold: 0.6 }
       );
       observer.observe(containerRef.current);
     } else {
-      // Browser lama tanpa IntersectionObserver: langsung jalankan
       isVisible = true;
     }
 

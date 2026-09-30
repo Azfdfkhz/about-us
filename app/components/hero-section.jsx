@@ -9,7 +9,6 @@ export default function HeroSection() {
         minHeight: "360px",
       }}
     >
-      {/* Background Butterfly SVG & Dotted Lines */}
       <div
         className="absolute pointer-events-none origin-top-right scale-[0.72] xs:scale-[0.8] sm:scale-100"
         style={{ top: "35px", right: "0px", width: "230px", height: "250px", zIndex: 1 }}
@@ -22,13 +21,9 @@ export default function HeroSection() {
         />
       </div>
 
-      {/* Main Content */}
       <div className="relative z-10 px-5 pt-8 pb-10">
-        {/* Top Header Row */}
         <div className="flex items-start justify-between gap-3">
-          {/* Left: Love SVG & Text */}
           <div className="flex flex-col items-start pt-1 flex-1 min-w-0 sm:max-w-[260px]">
-            {/* Love SVG: 40px */}
             <div className="mb-3 sm:mb-4">
               <Image
                 src="/images/hero/love.svg"
@@ -36,11 +31,9 @@ export default function HeroSection() {
                 width={40}
                 height={40}
                 className="w-8 h-8 sm:w-10 sm:h-10 object-contain"
- 
- />
+                />
             </div>
 
-            {/* Typography */}
             <p
               className="font-gamja text-white leading-none mb-1 text-[20px] sm:text-[24px]"
               style={{ fontWeight: 400 }}
@@ -60,13 +53,11 @@ export default function HeroSection() {
             </p>
           </div>
 
-          {/* Right: Stacked Circle Images */}
           <div className="relative shrink-0 w-[142px] xs:w-[155px] sm:w-[200px] h-[185px] xs:h-[200px] sm:h-[240px]">
             <div
               className="absolute right-0 top-0 w-[200px] h-[240px] origin-top-right scale-[0.72] xs:scale-[0.8] sm:scale-100"
               style={{ zIndex: 2 }}
             >
-              {/* Image 1: 85 x 87 (Top Right) */}
               <div
                 className="absolute"
                 style={{ top: "0px", right: "100px" }}
@@ -80,7 +71,6 @@ export default function HeroSection() {
                 />
               </div>
 
-              {/* Image 2: 37 x 38 (Middle Left) */}
               <div
                 className="absolute"
                 style={{ top: "120px", right: "125px" }}
@@ -94,7 +84,6 @@ export default function HeroSection() {
                 />
               </div>
 
-              {/* Image 3: 53 x 54 (Bottom Right) */}
               <div
                 className="absolute"
                 style={{ top: "180px", right: "15px" }}

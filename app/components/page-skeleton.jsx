@@ -1,6 +1,5 @@
 import MapSkeleton from "./map-skeleton";
 
-// Blok dasar skeleton. `tone` menyesuaikan warna dengan latar section-nya.
 const tones = {
   gray: "bg-gray-200",
   blue: "bg-blue-100",
@@ -15,7 +14,6 @@ function Bone({ className = "", tone = "gray" }) {
   );
 }
 
-/* 1. Hero */
 function HeroSkeleton() {
   return (
     <section
@@ -47,7 +45,6 @@ function HeroSkeleton() {
   );
 }
 
-/* 2. Visi & Misi */
 function VisionMissionSkeleton() {
   return (
     <section className="z-20 -mt-28 sm:-mt-20 relative">
@@ -83,7 +80,6 @@ function VisionMissionSkeleton() {
   );
 }
 
-/* 3. Amanah & Laporan Keuangan */
 function TrustSkeleton() {
   return (
     <section className="px-6 py-6">
@@ -132,7 +128,6 @@ function TrustSkeleton() {
   );
 }
 
-/* 4. Dampak Nyata + Peta */
 function ImpactSkeleton() {
   return (
     <section className="pb-3">
@@ -198,7 +193,6 @@ function ImpactSkeleton() {
   );
 }
 
-/* 5. Timeline */
 function TimelineSkeleton() {
   return (
     <section className="px-4 pb-10">
@@ -235,7 +229,6 @@ function TimelineSkeleton() {
   );
 }
 
-/* 6. Tim */
 function TeamSkeleton() {
   return (
     <section className="px-4 sm:px-6 pb-12">
@@ -260,7 +253,6 @@ function TeamSkeleton() {
   );
 }
 
-/* 7. Ajakan bergabung */
 function InviteSkeleton() {
   return (
     <section className="pb-10">
@@ -283,7 +275,6 @@ function InviteSkeleton() {
   );
 }
 
-/* 8. Fitur */
 function FeaturesSkeleton() {
   return (
     <section className="relative z-10 px-4 pb-10">
@@ -306,7 +297,6 @@ function FeaturesSkeleton() {
   );
 }
 
-/* 9. FAQ */
 function FaqSkeleton() {
   return (
     <section className="pb-12">

@@ -36,7 +36,6 @@ export default function FaqSection() {
 
   return (
     <section className="pb-12">
-      {/* Top White Card with Rounded Top 70px */}
       <div
         className="bg-white px-5 pt-8 pb-6 mb-6"
         style={{ borderRadius: "70px 70px 20px 20px" }}
@@ -48,7 +47,6 @@ export default function FaqSection() {
           Hal yang Sering Ditanyakan
         </h2>
 
-        {/* Accordion List */}
         <div className="space-y-4">
           {faqItems.map((item, idx) => (
             <div
@@ -95,7 +93,6 @@ export default function FaqSection() {
         </div>
       </div>
 
-      {/* Bottom Help Card */}
       <div
         className="mx-3 p-4 flex items-center gap-3 relative"
         style={{
@@ -127,7 +124,6 @@ export default function FaqSection() {
             Temukan informasi lebih lengkap di <span className="font-bold">pusat bantuan kami</span> atau hubungi <span className="font-bold">Customer Service Kami.</span>
           </p>
 
-          {/* Single horizontal line row: no wrap */}
           <div className="flex items-center gap-1.5 whitespace-nowrap">
             <button
               className="px-2.5 py-1.5 font-poppins font-bold text-white rounded text-[10px] sm:text-[11px] shadow-sm cursor-pointer hover:opacity-90 active:scale-95 transition-all shrink-0"

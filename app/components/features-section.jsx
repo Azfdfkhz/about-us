@@ -43,7 +43,6 @@ export default function FeaturesSection() {
         Kenapa Berdonasi Bersama Kami?
       </h2>
 
-      {/* px-8 dihapus & maxWidth kartu dihilangkan: kartu mengisi penuh tiap kolom */}
       <div className="flex flex-wrap gap-3">
         {features.map((item, idx) => (
           <div
@@ -54,7 +53,6 @@ export default function FeaturesSection() {
               boxShadow: "0 4px 14px rgba(0, 0, 0, 0.08)",
             }}
           >
-            {/* Icon di atas */}
             <div className="w-9 h-9 rounded-lg bg-[#EBF3FF] flex items-center justify-center shrink-0 p-1.5">
               <Image
                 src={item.icon}
@@ -65,7 +63,6 @@ export default function FeaturesSection() {
               />
             </div>
 
-            {/* Title di bawah icon */}
             <h3
               className="font-poppins font-semibold text-[#252A34] leading-tight line-clamp-2"
               style={{ fontSize: "14px" }}

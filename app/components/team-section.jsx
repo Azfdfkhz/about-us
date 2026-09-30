@@ -36,7 +36,6 @@ const teamMembers = [
 export default function TeamSection() {
   return (
     <section className="px-4 sm:px-6 pb-12">
-      {/* Heading */}
       <h2
         className="font-poppins font-bold text-[#1E5BBB] leading-snug"
         style={{ fontSize: "14px" }}
@@ -62,7 +61,6 @@ export default function TeamSection() {
               }`}
               style={{ containerType: "inline-size" }}
             >
-              {/* Foto */}
               <div className="relative w-full aspect-[196/190] bg-[#FFCC0A] rounded-t-[30px] overflow-hidden">
                 <Image
                   src={member.image}
@@ -73,7 +71,6 @@ export default function TeamSection() {
                 />
               </div>
 
-              {/* Badge biru dengan sisi bawah miring: 100% sejajar antara kiri dan kanan */}
               <div
                 className="bg-[#1E5BBB] text-white flex flex-col justify-start"
                 style={{

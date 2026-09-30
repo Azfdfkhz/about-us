@@ -9,9 +9,7 @@ export default function VisionMissionSection() {
         className="bg-white p-5 relative"
         style={{ borderRadius: "15px" }}
       >
-        {/* Top Section: Illustration Top on Mobile, Left on Desktop + Headline */}
         <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 sm:gap-3 mb-5">
-          {/* Illustration SVG */}
           <div className="shrink-0 flex justify-center sm:justify-start w-full sm:w-38.75 pt-1">
             <Image
               src="/images/vision-mission/happiness-academy-2.svg"
@@ -22,7 +20,6 @@ export default function VisionMissionSection() {
             />
           </div>
 
-          {/* Headline & Paragraph Right */}
           <div className="flex-1 w-full">
             <p
               className="font-poppins text-[#7B7B7B] leading-tight mb-2 text-left"
@@ -40,7 +37,6 @@ export default function VisionMissionSection() {
           </div>
         </div>
 
-        {/* Visi Kami */}
         <div className="mb-6 pl-3">
           <div className="flex items-center gap-3 mb-2">
             <Image
@@ -54,7 +50,6 @@ export default function VisionMissionSection() {
             </h3>
           </div>
 
-          {/* Menggunakan pl-9 (36px) agar teks sejajar tepat di bawah kata "Visi" */}
           <p className="font-poppins text-[#7B7B7B] leading-relaxed pl-9 text-[10px] font-medium">
             Menjadi platform kolaborasi digital yang menghubungkan kebaikan,
             memberdayakan masyarakat dan menciptakan perubahann sosial yang
@@ -62,7 +57,6 @@ export default function VisionMissionSection() {
           </p>
         </div>
 
-        {/* Misi Kami */}
         <div className="pl-3">
           <div className="flex items-center gap-3 mb-2">
             <Image
@@ -76,7 +70,6 @@ export default function VisionMissionSection() {
             </h3>
           </div>
 
-          {/* Menggunakan ml-9 dan pl-4 agar bullet sejajar dengan kata "Misi" */}
           <ul className="font-poppins text-[#7B7B7B] space-y-1 ml-9 pl-4 list-disc text-[10px] font-medium">
             <li>Membangun platform yang tangguh dan customer oriented.</li>
             <li>Menjalin dan memperluas kolaborasi dengan mitra strategis.</li>
