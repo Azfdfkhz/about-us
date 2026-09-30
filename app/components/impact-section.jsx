@@ -3,13 +3,12 @@
 import Image from "next/image";
 import dynamic from "next/dynamic";
 import { Heart, Leaf } from "lucide-react";
+import MapSkeleton from "./map-skeleton";
 
 const InteractiveMap = dynamic(() => import("./interactive-map"), {
   ssr: false,
   loading: () => (
-    <div className="w-full h-72 sm:h-80 rounded-2xl bg-blue-50/50 animate-pulse flex items-center justify-center text-[#1E5BBB] text-xs font-poppins">
-      Memuat Peta Sebaran Titik Kebaikan...
-    </div>
+    <MapSkeleton className="w-full h-72 sm:h-80 rounded-2xl border border-blue-100" />
   ),
 });
 

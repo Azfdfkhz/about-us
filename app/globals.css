@@ -34,3 +34,43 @@
 .font-poppins {
   font-family: 'Poppins', sans-serif;
 }
+
+/* Marker peta (MapLibre) */
+.sh-map-marker {
+  position: relative;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.sh-map-marker__pulse {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background-color: #7c3aed;
+  border-radius: 50%;
+  opacity: 0.4;
+  animation: sh-map-ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+.sh-map-marker__dot {
+  position: relative;
+  width: 14px;
+  height: 14px;
+  background-color: #7c3aed;
+  border: 2.5px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
+  box-sizing: border-box;
+}
+
+@keyframes sh-map-ping {
+  75%,
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
