@@ -9,10 +9,10 @@ export default function VisionMissionSection() {
         className="bg-white p-5 relative"
         style={{ borderRadius: "15px" }}
       >
-        {/* Top Section: Illustration Left + Headline Right */}
-        <div className="flex items-start gap-3 mb-5">
+        {/* Top Section: Illustration Top on Mobile, Left on Desktop + Headline */}
+        <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 sm:gap-3 mb-5">
           {/* Illustration SVG */}
-          <div className="shrink-0 w-38.75 pt-1">
+          <div className="shrink-0 flex justify-center sm:justify-start w-full sm:w-38.75 pt-1">
             <Image
               src="/images/vision-mission/happiness-academy-2.svg"
               alt="Happiness Academy illustration"
@@ -23,19 +23,19 @@ export default function VisionMissionSection() {
           </div>
 
           {/* Headline & Paragraph Right */}
-          <div className="flex-1">
+          <div className="flex-1 w-full">
             <p
-              className="font-poppins text-[#7B7B7B] leading-tight mb-2"
+              className="font-poppins text-[#7B7B7B] leading-tight mb-2 text-left"
               style={{ fontSize: "20px", fontWeight: 400 }}
             >
               Setiap Perjalanan Besar Selalu Berawal dari{" "}
               <span className="font-bold text-[#7B7B7B]">Satu Keyakinan</span>
             </p>
             <p
-              className="font-poppins text-[#7B7B7B] leading-relaxed"
+              className="font-poppins text-[#7B7B7B] leading-relaxed text-left"
               style={{ fontSize: "11px", fontWeight: 400 }}
             >
-              dengan berfokus pada bantuan kemanusiaan, respon bencana, kolaborasi, serta campaign kebaikan lainnya bersama organisasi, komunitas, personal dan kreator untuk memperluas dampak kebaikan.
+              Dengan berfokus pada bantuan kemanusiaan, respon bencana, kolaborasi, serta campaign kebaikan lainnya bersama organisasi, komunitas, personal dan kreator untuk memperluas dampak kebaikan.
             </p>
           </div>
         </div>
