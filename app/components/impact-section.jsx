@@ -143,7 +143,7 @@ export default function ImpactSection() {
             </div>
           </div>
 
-          <div className="overflow-hidden relative w-full h-60 border border-gray-100 rounded-2xl my-2">
+          <div className="overflow-hidden relative w-full h-50 sm:h-60 border border-gray-100 rounded-2xl my-2">
             <InteractiveMap />
           </div>
 

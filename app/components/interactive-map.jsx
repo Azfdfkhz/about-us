@@ -158,7 +158,7 @@ export default function InteractiveMap() {
   }, []);
 
   return (
-    <div className="relative w-full h-72 sm:h-80 rounded-2xl overflow-hidden shadow-inner border border-blue-100 z-0">
+    <div className="relative w-full h-50 sm:h-80 rounded-2xl overflow-hidden shadow-inner border border-blue-100 z-0">
       <div ref={containerRef} className="w-full h-full z-0" />
       <MapSkeleton
         className={`absolute inset-0 z-10 transition-opacity duration-500 ${
